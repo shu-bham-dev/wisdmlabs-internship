@@ -46,25 +46,64 @@
     background-color: magenta;
     margin: 0px 5px; }
 
-.articles .art__sections {
-  display: flex;
-  flex-direction: column;
-  margin: 0px 100px;
-  background-color: #e7c83e;
-  height: 700px;
-  margin-top: 60px; }
-  .articles .art__sections .art__heads {
-    color: #2a2a2a;
-    text-align: center;
-    font-weight: bold;
-    font-size: 20px; }
-.articles .article__row {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  color: brown; }
-.articles .article__img {
-  width: 50%;
-  background-image: url(http://www.hellofashionblog.com/wp-content/uploads/2016/11/4-13.jpg); }
+.articles {
+  width: 70%;
+  margin: auto; }
+  .articles .art__sections {
+    display: flex;
+    flex-direction: column;
+    background-color: #e7c83e;
+    height: 700px;
+    margin-top: 60px; }
+    .articles .art__sections .art__heads {
+      color: #2a2a2a;
+      text-align: center;
+      font-weight: bold;
+      font-size: 34px; }
+  .articles .article__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; }
+    .articles .article__row .article__col {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      margin: 5px; }
+      .articles .article__row .article__col .article__img {
+        height: 400px;
+        background: url(https://cf.ltkcdn.net/family/images/std/200821-800x533r1-family.jpg) center no-repeat;
+        background-size: cover; }
+      .articles .article__row .article__col .article__heading {
+        margin: 30px 0px 5px 5px;
+        font-size: 20px;
+        color: #353434;
+        font-weight: 550; }
+      .articles .article__row .article__col .aricle__dateandtime {
+        margin: 5px;
+        margin-top: -5px;
+        color: #a3a2a2; }
+      .articles .article__row .article__col .article__desc {
+        color: #a3a2a2;
+        margin: 5px;
+        font-weight: 900; }
+      .articles .article__row .article__col .article__continue {
+        text-transform: uppercase;
+        margin: 10px 0px;
+        cursor: pointer;
+        display: inline;
+        color: #a3a2a2; }
+      .articles .article__row .article__col .article__comment {
+        display: flex;
+        flex-direction: row; }
+        .articles .article__row .article__col .article__comment .cmnt__icn {
+          background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
+          height: 100px;
+          background-size: cover; }
+        .articles .article__row .article__col .article__comment .comment__number {
+          color: #a3a2a2;
+          margin: 20px 5px;
+          font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map */

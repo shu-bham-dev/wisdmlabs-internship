@@ -66,15 +66,14 @@
 }
 
 
-//RECENT--ARTICLE
+//RECENT--ARTICLE--SECTION
 
 .articles{
+    width: 70%;
+    margin: auto;
     .art__sections{
         display: flex;
         flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-        margin: 0px 100px;
         background-color: rgb(231, 200, 62);
         height: 700px;
         margin-top: 60px;
@@ -82,19 +81,71 @@
             color: $head--color;
             text-align: center;
             font-weight: bold;
-            font-size: $head--size;
+            font-size: $head--size*1.7;
         }
     }
 
     .article__row{
         display: flex;
+        flex-direction: row;
         align-items: center;
         width: 100%;
-        color: brown;
-    }
 
-    .article__img{
-        width: 50%;
-        height: 100%;
+        .article__col{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+
+            .article__img{
+                height: 400px;
+                background: url(https://cf.ltkcdn.net/family/images/std/200821-800x533r1-family.jpg) center no-repeat;
+                background-size: cover;
+            }
+
+            .article__heading{
+                margin: 30px 0px $feature--margin $feature--margin;
+                font-size: $head--size;
+                color:  $article--color;
+                font-weight: 550;
+            }
+            
+            .aricle__dateandtime{
+                margin: $feature--margin;
+                margin-top: -5px;
+                color: $article--items--color;
+            }
+
+            .article__desc{
+                color: $article--items--color;
+                margin: $feature--margin;
+                font-weight: 900;
+            }
+
+            .article__continue{
+                text-transform: uppercase;
+                margin: $feature--margin*2 0px;
+                cursor: pointer;
+                display: inline;
+                color: $article--items--color;
+            }
+
+            .article__comment{
+                display: flex;
+                flex-direction: row;
+                .cmnt__icn{
+                    background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
+                    height: 100px;
+                    background-size: cover;
+                }
+                .comment__number{
+                    color: $article--items--color;
+                    margin: $feature--margin*4 $feature--margin;
+                    font-weight: 600;
+                }
+            }
+        }
     }
+    
 }
