@@ -3,7 +3,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color: $bgcolor;
     font-family: $dftfont;
 }
 
@@ -77,9 +76,36 @@
     .feature__middle{
         width: 60%;
         height: 100%;
-        background: url(http://images.placesonline.com/blog/Burano_1.jpg) no-repeat;
+        background: url(http://images.placesonline.com/blog/Burano_1.jpg) center no-repeat;
         background-size: cover;
         margin: 0px $feature--margin*2 0px $feature--margin*2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .middle__box {
+            width: 90%;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white ;
+            text-align: center;
+            padding: 20px 15px;
+
+            .heading {
+                text-transform: uppercase;
+                margin: 10px;
+                font-size: 35px !important;
+            }
+            .btn-read{
+                background-color: rgba(0, 0, 0, 0.3);
+                color: white ;
+                cursor: pointer;
+                margin-top: 20px;
+                font-size: 25px;
+                border: none;
+            }
+            
+        }
+    
     }
 }
 
@@ -93,13 +119,13 @@
     .art__sections{
         display: flex;
         flex-direction: column;
-        height: 700px;
         margin-top: 60px;
         .art__heads{
             color: $head--color;
             text-align: center;
             font-weight: bold;
             font-size: $head--size*1.7;
+            margin-bottom: 25px;
         }
     }
 
@@ -174,3 +200,64 @@
     }
     
 }
+
+
+// FOOTER--IMAGES
+.footer-images{
+    height: 200px;
+    display: flex;
+    margin-top: 100px;
+    .slide{
+        height: 100%;
+        width: 33%;
+    }
+    .img1{
+        background: url(https://image.made-in-china.com/202f0j00GvcYDIULsTbA/Pendant-Light-Vintage-Pendant-Lamp-Hanging-Lamp-Modern-Pendant-Ceiling-Lamps-LED-Restaurant-Living-Room-DW-D90092-.jpg) center no-repeat;
+    }
+    .img2{
+        background: url(https://i.pinimg.com/originals/46/ee/25/46ee25286320d469e7aadd1e3545ed6e.jpg) center no-repeat;
+    }
+    .img3{
+        background: url(https://cdn.shopify.com/s/files/1/0269/8520/1746/products/product-image-1158053483_512x512.jpg?v=1605391631) center no-repeat;
+    }
+    .img4{
+        background: url(https://5.imimg.com/data5/VP/DJ/YB/SELLER-11399186/91-500x500.jpg) center no-repeat;
+    }
+}
+
+// FOOTER--SECTION
+.foot{
+    background-color: rgb(39, 36, 36);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .foot__text{
+        font-size: 12px;
+        color: rgb(224, 223, 221);
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        font-family: monospace;
+
+        a{
+            color: darkgrey;
+            list-style: none;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            &:active{
+                color: black;
+            }
+        }
+        li{
+            margin: 0px 10px;
+        }
+    }
+}
+
