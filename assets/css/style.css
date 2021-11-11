@@ -28,7 +28,7 @@
       .head ul a:active {
         color: black; }
     .head ul li {
-      margin: -10px 10px; }
+      margin: 0px 10px; }
 
 .feature {
   height: 600px;
@@ -38,21 +38,35 @@
     height: 100%; }
     .feature .feature__blocks .block {
       background-color: #9e929e;
-      height: 50%;
-      margin: 0px 2.5px 2.5px 0px; }
+      height: 50%; }
+    .feature .feature__blocks .blocks__a {
+      margin: 0px 5px 10px 0px;
+      background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) no-repeat;
+      background-size: cover; }
+    .feature .feature__blocks .blocks__b {
+      margin: 0px 5px 0px 0px;
+      background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) no-repeat;
+      background-size: cover; }
+    .feature .feature__blocks .right_a {
+      background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) no-repeat;
+      background-size: cover; }
+    .feature .feature__blocks .right_b {
+      background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) no-repeat;
+      background-size: cover; }
   .feature .feature__middle {
     width: 60%;
     height: 100%;
-    background-color: magenta;
-    margin: 0px 5px; }
+    background: url(http://images.placesonline.com/blog/Burano_1.jpg) no-repeat;
+    background-size: cover;
+    margin: 0px 10px 0px 10px; }
 
 .articles {
   width: 70%;
-  margin: auto; }
+  margin: auto;
+  background-color: white; }
   .articles .art__sections {
     display: flex;
     flex-direction: column;
-    background-color: #e7c83e;
     height: 700px;
     margin-top: 60px; }
     .articles .art__sections .art__heads {
@@ -72,8 +86,12 @@
       flex-direction: column;
       margin: 5px; }
       .articles .article__row .article__col .article__img {
-        height: 400px;
-        background: url(https://cf.ltkcdn.net/family/images/std/200821-800x533r1-family.jpg) center no-repeat;
+        height: 400px; }
+      .articles .article__row .article__col .img__a {
+        background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
+        background-size: cover; }
+      .articles .article__row .article__col .img__b {
+        background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
         background-size: cover; }
       .articles .article__row .article__col .article__heading {
         margin: 30px 0px 5px 5px;
