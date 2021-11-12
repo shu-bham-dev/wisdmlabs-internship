@@ -4,6 +4,7 @@
     margin: 0px;
     padding: 0px;
     font-family: $dftfont;
+    width: 100%;
 }
 
 // HEADER--SECTION
@@ -38,7 +39,28 @@
             margin: 0px 10px;
         }
     }
+}
 
+@media only screen and (max-width:700px){
+    .head{
+
+        .head__logo{
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .option__img{
+                background: url(https://cdn3.vectorstock.com/i/1000x1000/42/12/list-sign-icon-content-view-option-symbol-vector-2874212.jpg) no-repeat;
+                height: 100%;
+                background-size: contain;
+                width: 5%;
+            }
+        }
+        .head__nav{
+            display: none;
+        }
+        
+    }
 }
 
 
@@ -56,20 +78,20 @@
         }
         .blocks__a{
             margin: 0px $feature--margin $feature--margin*2 0px;
-            background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) no-repeat;
+            background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
             background-size: cover;
         }
         .blocks__b{
             margin: 0px $feature--margin 0px 0px;
-            background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) no-repeat;
+            background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) center no-repeat;
             background-size: cover;
         }
         .right_a{
-            background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) no-repeat;
+            background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
             background-size: cover;
         }
         .right_b{
-            background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) no-repeat;
+            background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
             background-size: cover;
         }
     }
@@ -108,6 +130,49 @@
     
     }
 }
+@media (min-width: 700px) and (max-width:1024px) {
+    .feature{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 1500px;
+        .feature__blocks{
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+            .block{
+                height: 100%;
+            }
+        }
+        .feature__middle{
+            width: 100%;
+            margin: 25px 0px;
+        }
+    }
+
+}
+@media only screen and (max-width:700px) {
+    .feature{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 1500px;
+        .feature__blocks{
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        .feature__middle{
+            width: 100%;
+            margin: 25px 0px;
+        }
+    }
+
+}
+
+
 
 
 //RECENT--ARTICLE--SECTION
@@ -198,8 +263,37 @@
             }
         }
     }
-    
 }
+@media only screen and (max-width:1024px){
+    .articles{
+        width: 95%;
+        background-color: $bgcolor;
+  }
+}
+@media only screen and (max-width:700px){
+    .articles{
+        width: 100%;
+        .article__row{
+            display: flex;
+            flex-direction: column;
+            .article__col{
+                width: 95%;
+                margin: auto;
+                .article__img{
+                    background-size: contain;
+                }
+            }
+        }
+        
+    }
+    .articles .article__row .article__col .aricle__dateandtime{
+        margin-top: 10px;
+    }
+    .art__heads{
+        margin: 0px;
+    }
+}
+
 
 
 // FOOTER--IMAGES
@@ -222,6 +316,15 @@
     }
     .img4{
         background: url(https://5.imimg.com/data5/VP/DJ/YB/SELLER-11399186/91-500x500.jpg) center no-repeat;
+    }
+}
+@media only screen and (max-width:700px){
+    .footer-images{
+        height: 100px;
+        border: 0.5px solid black;
+        .slide{
+            border: 1px solid grey;
+        }
     }
 }
 
@@ -260,4 +363,19 @@
         }
     }
 }
-
+@media only screen and (max-width:700px){
+    .foot{
+        display: flex;
+        flex-direction: column;
+        .foot__text{
+            text-align: center;
+        }
+        ul{
+            margin-top: 15px;
+            justify-content: center;
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+}
