@@ -1,13 +1,14 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: monospace;
-  width: 100%; }
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
 .head {
-  margin: 20px;
+  margin: auto;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 83%;
+  padding: 20px; }
   .head .head__logo {
     margin-left: 150px;
     color: black;
@@ -51,13 +52,12 @@
     height: 100%; }
     .feature .feature__blocks .block {
       background-color: #9e929e;
-      height: 50%; }
+      height: 49%; }
     .feature .feature__blocks .blocks__a {
-      margin: 0px 5px 10px 0px;
+      margin: 0px 0px 11px 0px;
       background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
       background-size: cover; }
     .feature .feature__blocks .blocks__b {
-      margin: 0px 5px 0px 0px;
       background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) center no-repeat;
       background-size: cover; }
     .feature .feature__blocks .right_a {
@@ -76,21 +76,23 @@
     align-items: center;
     justify-content: center; }
     .feature .feature__middle .middle__box {
-      width: 90%;
+      width: 80%;
       background-color: rgba(0, 0, 0, 0.3);
       color: white;
       text-align: center;
-      padding: 20px 15px; }
+      padding: 40px 15px; }
       .feature .feature__middle .middle__box .heading {
         text-transform: uppercase;
         margin: 10px;
         font-size: 35px !important; }
       .feature .feature__middle .middle__box .btn-read {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0);
+        text-transform: uppercase;
         color: white;
         cursor: pointer;
+        font-weight: 600;
         margin-top: 20px;
-        font-size: 25px;
+        font-size: 22px;
         border: none; }
 
 @media (min-width: 700px) and (max-width: 1024px) {
@@ -106,7 +108,9 @@
       display: flex;
       flex-direction: row; }
       .feature .feature__blocks .block {
-        height: 100%; }
+        height: 100%;
+        width: 49%;
+        margin: 5px; }
     .feature .feature__middle {
       width: 100%;
       margin: 25px 0px; } }
@@ -136,12 +140,13 @@
       text-align: center;
       font-weight: bold;
       font-size: 34px;
-      margin-bottom: 25px; }
+      margin-bottom: -10px; }
   .articles .article__row {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%; }
+    width: 100%;
+    margin-top: 40px; }
     .articles .article__row .article__col {
       height: 100%;
       width: 50%;
@@ -157,35 +162,46 @@
         background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
         background-size: cover; }
       .articles .article__row .article__col .article__heading {
-        margin: 30px 0px 5px 5px;
+        margin: 30px 0px 10px 5px;
         font-size: 20px;
-        color: #353434;
+        color: #5f5d5d;
         font-weight: 550; }
       .articles .article__row .article__col .aricle__dateandtime {
         margin: 5px;
-        margin-top: -5px;
+        margin-top: 0px;
         color: #a3a2a2; }
       .articles .article__row .article__col .article__desc {
         color: #a3a2a2;
         margin: 5px;
-        font-weight: 900; }
+        margin-top: 20px;
+        font-weight: 550;
+        line-height: 25px; }
       .articles .article__row .article__col .article__continue {
         text-transform: uppercase;
-        margin: 10px 0px;
+        margin: 20px 0px;
         cursor: pointer;
         display: inline;
-        color: #a3a2a2; }
+        font-weight: 600;
+        color: #8d8d8d;
+        font-size: 15px; }
+      .articles .article__row .article__col hr {
+        height: 1px;
+        border-width: 0;
+        background-color: #e2dfdf; }
       .articles .article__row .article__col .article__comment {
         display: flex;
-        flex-direction: row; }
-        .articles .article__row .article__col .article__comment .cmnt__icn {
-          background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
-          height: 100px;
-          background-size: cover; }
+        flex-direction: row-reverse;
+        justify-content: start; }
         .articles .article__row .article__col .article__comment .comment__number {
           color: #a3a2a2;
           margin: 20px 5px;
-          font-weight: 600; }
+          font-weight: 500; }
+        .articles .article__row .article__col .article__comment .comment__icon {
+          background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
+          background-size: cover;
+          width: 15px;
+          height: 22px;
+          margin-top: 15px; }
 
 @media only screen and (max-width: 1024px) {
   .articles {
@@ -235,15 +251,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px; }
+  padding: 30px; }
   .foot .foot__text {
-    font-size: 12px;
-    color: #e0dfdd; }
+    font-size: 20px;
+    color: #575757;
+    margin: auto;
+    width: 45%; }
+  .foot .foot__nav {
+    margin: auto;
+    width: 20%; }
   .foot ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    font-family: monospace; }
+    font-family: monospace;
+    margin: auto;
+    width: 10%; }
     .foot ul a {
       color: darkgrey;
       list-style: none;
@@ -267,5 +290,14 @@
       justify-content: center; }
       .foot ul a {
         font-size: 12px; } }
+.myBtn {
+  position: fixed;
+  bottom: 10px;
+  float: right;
+  right: 1%;
+  max-width: 52px;
+  width: 100%;
+  font-size: 20px;
+  background-color: #c6c5c5; }
 
 /*# sourceMappingURL=style.css.map */
