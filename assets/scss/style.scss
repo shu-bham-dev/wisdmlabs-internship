@@ -342,6 +342,16 @@
                 .article__img{
                     background-size: contain;
                     margin-top: -30px;
+                    .article__cat{
+                        width: 100px;
+                        padding: 5px;
+                        text-align: center;
+                        position: relative;
+                        background-color: white;
+                        color: $article--items--color;
+                        left: 35%;
+                        top: 80%;
+                    }
                 }
             }
         }
@@ -399,16 +409,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 30px 60px;
 
     .foot__text{
         color: rgb(87, 87, 87);
-        margin-left: 265px;
+        margin-left: 220px;
     }
 
     .foot__nav{
         margin: auto;
         width: 65%;
+    }
+
+    .click_to_top{
+        background-color: grey;
+        width: 35px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-size: 30px;
     }
 
     ul{
@@ -438,12 +459,23 @@
     .foot{
         display: flex;
         flex-direction: column;
+        .click_to_top{
+            background-color: grey;
+            width: 35px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-left: 340px;
+        }
         .foot__nav{
             width: 100%;
         }
         .foot__text{
             text-align: center;
-            margin: 0px;
+            margin-left: 0px;
         }
         ul{
             margin-top: 15px;
@@ -478,15 +510,3 @@
     }
 }
 // FOOTER--SECTION--END
-
-
-.myBtn {
-    position: fixed;
-    bottom: 10px;
-    float: right;
-    right: 1%;
-    max-width: 52px;
-    width: 100%;
-    font-size: 20px;
-    background-color: #c6c5c5;
-}
