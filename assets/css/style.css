@@ -176,6 +176,15 @@
       margin: 5px; }
       .articles .article__row .article__col .article__img {
         height: 400px; }
+        .articles .article__row .article__col .article__img .article__cat {
+          width: 100px;
+          padding: 5px;
+          text-align: center;
+          position: relative;
+          background-color: white;
+          color: #a3a2a2;
+          left: 40%;
+          top: 97%; }
       .articles .article__row .article__col .img__a {
         background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
         background-size: cover; }

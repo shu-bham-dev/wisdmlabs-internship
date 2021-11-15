@@ -243,6 +243,16 @@
 
             .article__img{
                 height: 400px;
+                .article__cat{
+                    width: 100px;
+                    padding: 5px;
+                    text-align: center;
+                    position: relative;
+                    background-color: white;
+                    color: $article--items--color;
+                    left: 40%;
+                    top: 97%;
+                }
             }
 
             .img__a{
