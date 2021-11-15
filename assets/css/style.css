@@ -301,14 +301,15 @@
     margin: auto;
     width: 65%; }
   .foot .click_to_top {
-    background-color: grey;
-    width: 35px;
+    background-color: #b4b4b4;
+    width: 30px;
     height: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    font-size: 30px; }
+    font-size: 30px;
+    cursor: pointer; }
   .foot ul {
     list-style: none;
     display: flex;
@@ -356,6 +357,16 @@
   .foot {
     display: flex;
     flex-direction: row; }
+    .foot .click_to_top {
+      background-color: #b4b4b4;
+      width: 65px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      font-size: 30px;
+      cursor: pointer; }
     .foot .foot__nav {
       width: 100%; }
     .foot .foot__text {
