@@ -7,8 +7,8 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  width: 83%;
-  padding: 20px; }
+  width: 77%;
+  padding: 25px; }
   .head .head__logo {
     margin-left: 150px;
     color: black;
@@ -32,29 +32,47 @@
       margin: 0px 10px; }
 
 @media only screen and (max-width: 700px) {
-  .head .head__logo {
-    margin: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    .head .head__logo .option__img {
+  .head {
+    width: 90%; }
+    .head .head__logo {
+      margin: 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+    .head .option__img {
       background: url(https://cdn3.vectorstock.com/i/1000x1000/42/12/list-sign-icon-content-view-option-symbol-vector-2874212.jpg) no-repeat;
-      height: 100%;
       background-size: contain;
-      width: 5%; }
-  .head .head__nav {
-    display: none; } }
+      height: 27px;
+      width: 50px;
+      cursor: pointer; }
+    .head .head__nav {
+      display: none; } }
+@media (min-width: 700px) and (max-width: 1024px) {
+  .head {
+    width: 90%; }
+    .head .head__nav {
+      display: none; }
+    .head .head__logo h3 {
+      font-size: 50px;
+      margin-left: -150px; }
+    .head .option__img {
+      background: url(https://cdn3.vectorstock.com/i/1000x1000/42/12/list-sign-icon-content-view-option-symbol-vector-2874212.jpg) no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      cursor: pointer; } }
 .feature {
   height: 600px;
-  display: flex; }
+  display: flex;
+  margin-bottom: 130px; }
   .feature .feature__blocks {
-    width: 20%;
+    width: 30%;
     height: 100%; }
     .feature .feature__blocks .block {
       background-color: #9e929e;
-      height: 49%; }
+      height: 48.5%; }
     .feature .feature__blocks .blocks__a {
-      margin: 0px 0px 11px 0px;
+      margin: 0px 0px 16px 0px;
       background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
       background-size: cover; }
     .feature .feature__blocks .blocks__b {
@@ -71,16 +89,19 @@
     height: 100%;
     background: url(http://images.placesonline.com/blog/Burano_1.jpg) center no-repeat;
     background-size: cover;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 15px;
     display: flex;
     align-items: center;
     justify-content: center; }
     .feature .feature__middle .middle__box {
       width: 80%;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.4);
       color: white;
       text-align: center;
       padding: 40px 15px; }
+      .feature .feature__middle .middle__box .middle__text {
+        text-indent: 50px;
+        line-height: 25px; }
       .feature .feature__middle .middle__box .heading {
         text-transform: uppercase;
         margin: 10px;
@@ -128,7 +149,7 @@
       width: 100%;
       margin: 25px 0px; } }
 .articles {
-  width: 70%;
+  width: 65%;
   margin: auto;
   background-color: white; }
   .articles .art__sections {
@@ -216,8 +237,11 @@
       .articles .article__row .article__col {
         width: 95%;
         margin: auto; }
+        .articles .article__row .article__col .article__heading {
+          margin: -35px 0px 10px 5px; }
         .articles .article__row .article__col .article__img {
-          background-size: contain; }
+          background-size: contain;
+          margin-top: -30px; }
 
   .articles .article__row .article__col .aricle__dateandtime {
     margin-top: 10px; }
@@ -253,20 +277,17 @@
   align-items: center;
   padding: 30px; }
   .foot .foot__text {
-    font-size: 20px;
     color: #575757;
-    margin: auto;
-    width: 45%; }
+    margin-left: 265px; }
   .foot .foot__nav {
     margin: auto;
-    width: 20%; }
+    width: 65%; }
   .foot ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    font-family: monospace;
     margin: auto;
-    width: 10%; }
+    width: 40%; }
     .foot ul a {
       color: darkgrey;
       list-style: none;
@@ -283,13 +304,33 @@
   .foot {
     display: flex;
     flex-direction: column; }
+    .foot .foot__nav {
+      width: 100%; }
     .foot .foot__text {
-      text-align: center; }
+      text-align: center;
+      margin: 0px; }
     .foot ul {
       margin-top: 15px;
-      justify-content: center; }
+      justify-content: center;
+      width: 100%; }
       .foot ul a {
         font-size: 12px; } }
+@media (min-width: 700px) and (max-width: 1024px) {
+  .foot {
+    display: flex;
+    flex-direction: row; }
+    .foot .foot__nav {
+      width: 100%; }
+    .foot .foot__text {
+      text-align: center;
+      margin: 0px;
+      width: 100%; }
+    .foot ul {
+      margin-top: 15px;
+      justify-content: center;
+      width: 100%; }
+      .foot ul a {
+        font-size: 15px; } }
 .myBtn {
   position: fixed;
   bottom: 10px;
