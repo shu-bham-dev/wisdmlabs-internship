@@ -12,13 +12,16 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    width: 77%;
+    width: 80%;
     padding: 25px;
     .head__logo{
         margin-left: 150px;
         color: black;
         font-weight: bold;
         font-size: 20px;
+    }
+    .head__nav{
+        margin-right: 150px;
     }
     ul{
         list-style: none;
@@ -51,7 +54,7 @@
             justify-content: space-between;   
         }
         .option__img{
-            background: url(https://cdn3.vectorstock.com/i/1000x1000/42/12/list-sign-icon-content-view-option-symbol-vector-2874212.jpg) no-repeat;
+            background: url(https://icons.veryicon.com/png/o/business/financial-linear-icon/option-3.png) no-repeat;
             background-size: contain;
             height: 27px;
             width: 50px;
@@ -76,7 +79,7 @@
             }
         }
         .option__img{
-            background: url(https://cdn3.vectorstock.com/i/1000x1000/42/12/list-sign-icon-content-view-option-symbol-vector-2874212.jpg) no-repeat;
+            background: url(https://icons.veryicon.com/png/o/business/financial-linear-icon/option-3.png) no-repeat;
             background-size: contain;
             height: 50px;
             width: 50px;
@@ -143,7 +146,7 @@
             .heading {
                 text-transform: uppercase;
                 margin: 10px;
-                font-size: 35px !important;
+                font-size: 35px;
             }
             .btn-read{
                 background-color: rgba(0, 0, 0, 0);
@@ -167,7 +170,7 @@
         width: 100%;
         height: 1500px;
         .feature__blocks{
-            height: 100%;
+            height: 40%;
             width: 100%;
             margin: 0px;
             display: flex;
@@ -175,7 +178,7 @@
             .block{
                 height: 100%;
                 width: 49%;
-                margin: 5px;
+                margin-right: 20px;
             }
         }
         .feature__middle{
@@ -198,7 +201,26 @@
         }
         .feature__middle{
             width: 100%;
-            margin: 25px 0px;
+            margin: 18px 0px;
+            .middle__box {
+                width: auto;
+                height: 83%;
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                .heading{
+                    width: auto;
+                    font-size: 25px;
+                }
+                .middle__text{
+                    text-indent: 0px;
+                    line-height: 30px;
+                }
+                .btn-read{
+                    font-size: 22px;
+                }
+            }
         }
     }
 
@@ -343,6 +365,8 @@
                 .article__img{
                     background-size: contain;
                     margin-top: -30px;
+                    margin-right: 5px;
+                    margin-left: 5px;
                     .article__cat{
                         width: 100px;
                         padding: 5px;
@@ -372,7 +396,7 @@
 
 // FOOTER--IMAGES
 .footer-images{
-    height: 200px;
+    height: 300px;
     display: flex;
     margin-top: 100px;
     .slide{
@@ -391,14 +415,13 @@
     .img4{
         background: url(https://5.imimg.com/data5/VP/DJ/YB/SELLER-11399186/91-500x500.jpg) center no-repeat;
     }
+    .img5{
+        background: url(https://mms.businesswire.com/media/20201001005171/en/826460/5/4x3.jpg) center no-repeat;
+    }
 }
 @media only screen and (max-width:700px){
     .footer-images{
         height: 100px;
-        border: 0.5px solid black;
-        .slide{
-            border: 1px solid grey;
-        }
     }
 }
 // FOOTER--IMAGES--END
@@ -409,31 +432,28 @@
     background-color: rgb(39, 36, 36);
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 30px 60px;
 
     .containt{
             margin: auto;
-            width: 90%;
+            width: 80%;
             flex-direction: row;
             display: flex;
+            justify-content: space-between;
         .foot__text{
             color: rgb(87, 87, 87);
-            margin-left: 220px;
-            font-size: 14px;
+            margin-left: 150px;
+            font-size: 18px;
         }
 
         .foot__nav{
-            margin: auto;
-            width: 65%;
+            margin-right: 150px;
         }
 
         ul{
             list-style: none;
             display: flex;
             flex-direction: row;
-            margin: auto;
-            width: 40%;
 
             a{
                 color: darkgrey;
@@ -453,14 +473,15 @@
     }
     .click_to_top{
         background-color: rgb(180, 180, 180);
-        width: 30px;
-        height: 30px;
+        width: 37px;
+        height: 38px;
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
         font-size: 30px;
         cursor: pointer;
+        margin-top: -27px;
     }
 }
 @media only screen and (max-width:700px){
@@ -476,7 +497,7 @@
             text-align: center;
             justify-content: center;
             font-size: 30px;
-            margin-left: 340px;
+            margin-left: 275px;
         }
         .containt{
             margin: 0px;
@@ -489,7 +510,7 @@
             .foot__text{
                 text-align: center;
                 margin-left: 0px;
-                font-size: 13px;
+                font-size: 12px;
             }
             ul{
                 margin-top: 15px;
@@ -508,28 +529,31 @@
         flex-direction: row;
         .click_to_top{
             background-color: rgb(180, 180, 180);
-            width: 65px;
-            height: 30px;
+            width: 44px;
+            height: 35px;
             display: flex;
             flex-direction: column;
             text-align: center;
             justify-content: center;
             font-size: 30px;
             cursor: pointer;
+            margin-top: 0px;
         }
         .containt{
             text-align: center;
             justify-content: center;
             align-content: center;
             align-items: center;
+            width: 100%;
             .foot__nav{
                 width: 100%;
+                margin-right: 0px;
             }
             .foot__text{
                 text-align: center;
                 margin: 0px;
                 width: 100%;
-                font-size: 15px;
+                font-size: 17px;
                 color: rgb(221, 221, 221);
             }
             ul{
