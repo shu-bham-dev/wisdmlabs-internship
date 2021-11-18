@@ -36,6 +36,9 @@
             display: flex;
             flex-direction: row;
             font-family: $dftfont;
+            .highlight {
+                color: rgb(88, 88, 88);
+            }
             a {
                 color: darkgrey;
                 list-style: none;
@@ -115,7 +118,7 @@
         height: 100%;
         .block {
             background-color: rgb(158, 146, 158);
-            height: 48.5%;
+            height: 48.7%;
         }
         .blocks-a {
             margin: 0px 0px 16px 0px;

@@ -31,6 +31,8 @@
       display: flex;
       flex-direction: row;
       font-family: monospace; }
+      .head .content ul .highlight {
+        color: #585858; }
       .head .content ul a {
         color: darkgrey;
         list-style: none;
@@ -87,7 +89,7 @@
     height: 100%; }
     .feature .feature-blocks .block {
       background-color: #9e929e;
-      height: 48.5%; }
+      height: 48.7%; }
     .feature .feature-blocks .blocks-a {
       margin: 0px 0px 16px 0px;
       background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
