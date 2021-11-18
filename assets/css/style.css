@@ -327,39 +327,39 @@
 @media (min-width: 700px) and (max-width: 1024px) {
   .footer-images {
     height: 240px; } }
-.foot {
+footer {
   background-color: #272424;
   display: flex;
   justify-content: space-between;
   padding: 30px 60px; }
-  .foot .containt {
+  footer .containt {
     margin: auto;
     width: 80%;
     flex-direction: row;
     display: flex;
     justify-content: space-between; }
-    .foot .containt .foot-text {
+    footer .containt .footer-text {
       color: #575757;
       margin-left: 150px;
       font-size: 18px; }
-    .foot .containt .foot-nav {
+    footer .containt .footer-nav {
       margin-right: 150px; }
-    .foot .containt ul {
+    footer .containt ul {
       list-style: none;
       display: flex;
       flex-direction: row; }
-      .foot .containt ul a {
+      footer .containt ul a {
         color: darkgrey;
         list-style: none;
         text-decoration: none;
         font-size: 15px;
         font-weight: bold;
         text-transform: uppercase; }
-        .foot .containt ul a:active {
+        footer .containt ul a:active {
           color: black; }
-      .foot .containt ul li {
+      footer .containt ul li {
         margin: 0px 10px; }
-  .foot .click_to_top {
+  footer .click_to_top {
     background-color: #b4b4b4;
     width: 37px;
     height: 38px;
@@ -373,10 +373,10 @@
     color: white; }
 
 @media only screen and (max-width: 700px) {
-  .foot {
+  footer {
     display: flex;
     flex-direction: column; }
-    .foot .click_to_top {
+    footer .click_to_top {
       background-color: grey;
       width: 35px;
       height: 30px;
@@ -386,30 +386,30 @@
       justify-content: center;
       font-size: 30px;
       margin-left: 275px; }
-    .foot .containt {
+    footer .containt {
       margin: 0px;
       display: flex;
       flex-direction: column;
       width: 100%; }
-      .foot .containt .foot-nav {
+      footer .containt .footer-nav {
         width: 100%; }
-      .foot .containt .foot-text {
+      footer .containt .footer-text {
         text-align: center;
         margin-left: 0px;
         font-size: 12px; }
-      .foot .containt ul {
+      footer .containt ul {
         margin-top: 15px;
         justify-content: center;
         width: 100%; }
-        .foot .containt ul li {
+        footer .containt ul li {
           margin: 0px 8px; }
-        .foot .containt ul a {
+        footer .containt ul a {
           font-size: 12px; } }
 @media (min-width: 700px) and (max-width: 1024px) {
-  .foot {
+  footer {
     display: flex;
     flex-direction: row; }
-    .foot .click_to_top {
+    footer .click_to_top {
       background-color: #b4b4b4;
       width: 44px;
       height: 35px;
@@ -420,26 +420,26 @@
       font-size: 30px;
       cursor: pointer;
       margin-top: 0px; }
-    .foot .containt {
+    footer .containt {
       text-align: center;
       justify-content: center;
       align-content: center;
       align-items: center;
       width: 100%; }
-      .foot .containt .foot-nav {
+      footer .containt .footer-nav {
         width: 100%;
         margin-right: 0px; }
-      .foot .containt .foot-text {
+      footer .containt .footer-text {
         text-align: center;
         margin: 0px;
         width: 100%;
         font-size: 17px;
         color: #dddddd; }
-      .foot .containt ul {
+      footer .containt ul {
         margin-top: 0px;
         justify-content: center;
         width: 100%; }
-        .foot .containt ul a {
+        footer .containt ul a {
           font-size: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
