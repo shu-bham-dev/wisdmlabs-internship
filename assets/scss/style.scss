@@ -1,84 +1,99 @@
 @import '_partials/variables';
-
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 // HEADER--SECTION
-
-.head{
-    margin: auto;
+.head {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    padding: 25px;
-    .head__logo{
-        margin-left: 150px;
-        color: black;
-        font-weight: bold;
-        font-size: 20px;
-    }
-    .head__nav{
-        margin-right: 150px;
-    }
-    ul{
-        list-style: none;
-        display: flex;
+    padding: 30px 60px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    margin-top: -116px;
+    .content {
+        margin: auto;
+        width: 80%;
         flex-direction: row;
-        font-family: $dftfont;
-        a{
-            color: darkgrey;
-            list-style: none;
-            text-decoration: none;
-            font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .head-logo {
+            margin-left: 98px;
+            color: black;
             font-weight: bold;
-            text-transform: uppercase;
-            &:active{
-                color: black;
-            }
+            font-size: 25px;
         }
-        li{
-            margin: 0px 10px;
+        .head-nav {
+            margin-right: 190px;
         }
-    }
-}
-@media only screen and (max-width:700px){
-    .head{
-        width: 90%;
-        .head__logo{
-            margin: 0px;
+        ul {
+            list-style: none;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;   
-        }
-        .option__img{
-            background: url(https://icons.veryicon.com/png/o/business/financial-linear-icon/option-3.png) no-repeat;
-            background-size: contain;
-            height: 27px;
-            width: 50px;
-            cursor: pointer;
+            font-family: $dftfont;
+            a {
+                color: darkgrey;
+                list-style: none;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+                &:active {
+                    color: black;
+                }
             }
-        .head__nav{
-            display: none;
+            li {
+                margin: 0px 10px;
+            }
         }
-        
     }
 }
+
+@media only screen and (max-width:700px) {
+    .head {
+        width: 85%;
+        .content {
+            width: 100%;
+            align-items: center;
+            .head-logo {
+                margin-left: -33px;
+                font-size: 36px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .option-img {
+                background: url(https://static.thenounproject.com/png/703781-200.png) no-repeat;
+                background-size: cover;
+                height: 63px;
+                width: 63px;
+                cursor: pointer;
+            }
+            .head-nav {
+                display: none;
+            }
+        }
+    }
+}
+
 @media (min-width: 700px) and (max-width: 1024px) {
-    .head{
+    .head {
         width: 90%;
-        .head__nav{
+        .head-nav {
             display: none;
         }
-        .head__logo{
-            h3{
+        .head-logo {
+            h3 {
                 font-size: 50px;
                 margin-left: -150px;
             }
         }
-        .option__img{
+        .option-img {
             background: url(https://icons.veryicon.com/png/o/business/financial-linear-icon/option-3.png) no-repeat;
             background-size: contain;
             height: 50px;
@@ -86,43 +101,41 @@
             cursor: pointer;
         }
     }
-    
 }
 
 // HEADER--SECTION--END
-
 // FEATURE--SECTION
-
-.feature{
+.feature {
     height: 600px;
     display: flex;
     margin-bottom: 130px;
-    .feature__blocks{
+    margin-top: 116px;
+    .feature-blocks {
         width: 30%;
         height: 100%;
-        .block{
+        .block {
             background-color: rgb(158, 146, 158);
             height: 48.5%;
         }
-        .blocks__a{
+        .blocks-a {
             margin: 0px 0px 16px 0px;
             background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
             background-size: cover;
         }
-        .blocks__b{
+        .blocks-b {
             background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) center no-repeat;
             background-size: cover;
         }
-        .right_a{
+        .right_a {
             background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
             background-size: cover;
         }
-        .right_b{
+        .right_b {
             background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
             background-size: cover;
         }
     }
-    .feature__middle{
+    .feature-middle {
         width: 60%;
         height: 100%;
         background: url(http://images.placesonline.com/blog/Burano_1.jpg) center no-repeat;
@@ -131,116 +144,108 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        .middle__box {
+        .middle-box {
             width: 80%;
             background-color: rgba(0, 0, 0, 0.4);
-            color: white ;
+            color: white;
             text-align: center;
             padding: 40px 15px;
-            .middle__text{
+            .middle-text {
                 text-indent: 50px;
                 line-height: 25px;
             }
-
             .heading {
                 text-transform: uppercase;
                 margin: 10px;
                 font-size: 35px;
             }
-            .btn-read{
+            .btn-read {
                 background-color: rgba(0, 0, 0, 0);
                 text-transform: uppercase;
-                color: white ;
+                color: white;
                 cursor: pointer;
                 font-weight: 600;
                 margin-top: 20px;
                 font-size: 22px;
                 border: none;
             }
-            
         }
-    
     }
 }
+
 @media (min-width: 700px) and (max-width:1024px) {
-    .feature{
+    .feature {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 1500px;
-        .feature__blocks{
+        .feature-blocks {
             height: 40%;
             width: 100%;
             margin: 0px;
             display: flex;
             flex-direction: row;
-            .block{
+            .block {
                 height: 100%;
                 width: 49%;
                 margin-right: 20px;
             }
         }
-        .feature__middle{
+        .feature-middle {
             width: 100%;
             margin: 25px 0px;
         }
     }
-
 }
+
 @media only screen and (max-width:700px) {
-    .feature{
+    .feature {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 1500px;
-        .feature__blocks{
+        .feature-blocks {
             height: 100%;
             width: 100%;
             margin: 0px;
         }
-        .feature__middle{
+        .feature-middle {
             width: 100%;
             margin: 18px 0px;
-            .middle__box {
+            .middle-box {
                 width: auto;
                 height: 83%;
                 display: flex;
                 text-align: center;
                 flex-direction: column;
                 justify-content: center;
-                .heading{
+                .heading {
                     width: auto;
                     font-size: 25px;
                 }
-                .middle__text{
+                .middle-text {
                     text-indent: 0px;
                     line-height: 30px;
                 }
-                .btn-read{
+                .btn-read {
                     font-size: 22px;
                 }
             }
         }
     }
-
 }
 
 // FEATURE--SECTION--END
-
-
-
 //RECENT--ARTICLE--SECTION
-
-.articles{
+.articles {
     width: 65%;
     margin: auto;
     background-color: $bgcolor;
-    .art__sections{
+    .art-sections {
         display: flex;
         flex-direction: column;
         margin-top: 60px;
-        .art__heads{
+        .art-heads {
             color: $head--color;
             text-align: center;
             font-weight: bold;
@@ -248,25 +253,22 @@
             margin-bottom: -10px;
         }
     }
-
-    .article__row{
+    .article-row {
         display: flex;
         flex-direction: row;
         align-items: center;
         width: 100%;
         margin-top: 40px;
-
-        .article__col{
+        .article-col {
             height: 100%;
             width: 50%;
             display: flex;
             flex-direction: column;
             margin: 5px;
             margin-left: 20px;
-
-            .article__img{
+            .article-img {
                 height: 400px;
-                .article__cat{
+                .article-cat {
                     width: 100px;
                     padding: 5px;
                     text-align: center;
@@ -277,38 +279,33 @@
                     top: 97%;
                 }
             }
-
-            .img__a{
+            .img-a {
                 background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
                 background-size: cover;
             }
-            .img__b{
+            .img-b {
                 background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
                 background-size: cover;
             }
-
-            .article__heading{
+            .article-heading {
                 margin: 30px 0px $feature--margin*2 $feature--margin;
                 font-size: $head--size;
-                color:  $article--color;
+                color: $article--color;
                 font-weight: 550;
             }
-            
-            .aricle__dateandtime{
+            .aricle-dateandtime {
                 margin: $feature--margin;
                 margin-top: 0px;
                 color: $article--items--color;
             }
-
-            .article__desc{
+            .article-desc {
                 color: $article--items--color;
                 margin: $feature--margin;
                 margin-top: 20px;
                 font-weight: 550;
                 line-height: 25px;
             }
-
-            .article__continue{
+            .article-continue {
                 text-transform: uppercase;
                 margin: $feature--margin*4 0px;
                 cursor: pointer;
@@ -317,23 +314,21 @@
                 color: rgb(141, 141, 141);
                 font-size: 15px;
             }
-
-            hr{
-                height:1px;
-                border-width:0;
-                background-color:rgb(226, 223, 223);
+            hr {
+                height: 1px;
+                border-width: 0;
+                background-color: rgb(226, 223, 223);
             }
-
-            .article__comment{
+            .article-comment {
                 display: flex;
                 flex-direction: row-reverse;
                 justify-content: start;
-                .comment__number{
+                .comment-number {
                     color: $article--items--color;
                     margin: $feature--margin*4 $feature--margin;
                     font-weight: 500;
                 }
-                .comment__icon{
+                .comment-icon {
                     background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
                     background-size: cover;
                     width: 15px;
@@ -344,30 +339,32 @@
         }
     }
 }
-@media only screen and (max-width:1024px){
-    .articles{
+
+@media only screen and (max-width:1024px) {
+    .articles {
         width: 95%;
         background-color: $bgcolor;
-  }
+    }
 }
-@media only screen and (max-width:700px){
-    .articles{
+
+@media only screen and (max-width:700px) {
+    .articles {
         width: 100%;
-        .article__row{
+        .article-row {
             display: flex;
             flex-direction: column;
-            .article__col{
+            .article-col {
                 width: 95%;
                 margin: auto;
-                .article__heading{
+                .article-heading {
                     margin: -35px 0px 10px 5px;
                 }
-                .article__img{
+                .article-img {
                     background-size: contain;
                     margin-top: -30px;
                     margin-right: 5px;
                     margin-left: 5px;
-                    .article__cat{
+                    .article-cat {
                         width: 100px;
                         padding: 5px;
                         text-align: center;
@@ -380,98 +377,96 @@
                 }
             }
         }
-        
     }
-    .articles .article__row .article__col .aricle__dateandtime{
+    .articles .article-row .article-col .aricle-dateandtime {
         margin-top: 10px;
     }
-    .art__heads{
+    .art-heads {
         margin: 0px;
     }
 }
 
 //RECENT--ARTICLE--SECTION--END
-
-
-
 // FOOTER--IMAGES
-.footer-images{
+.footer-images {
     height: 300px;
     display: flex;
     margin-top: 100px;
-    .slide{
+    .slide {
         height: 100%;
         width: 33%;
     }
-    .img1{
+    .img1 {
         background: url(https://image.made-in-china.com/202f0j00GvcYDIULsTbA/Pendant-Light-Vintage-Pendant-Lamp-Hanging-Lamp-Modern-Pendant-Ceiling-Lamps-LED-Restaurant-Living-Room-DW-D90092-.jpg) center no-repeat;
     }
-    .img2{
+    .img2 {
         background: url(https://i.pinimg.com/originals/46/ee/25/46ee25286320d469e7aadd1e3545ed6e.jpg) center no-repeat;
     }
-    .img3{
+    .img3 {
         background: url(https://cdn.shopify.com/s/files/1/0269/8520/1746/products/product-image-1158053483_512x512.jpg?v=1605391631) center no-repeat;
     }
-    .img4{
+    .img4 {
         background: url(https://5.imimg.com/data5/VP/DJ/YB/SELLER-11399186/91-500x500.jpg) center no-repeat;
     }
-    .img5{
+    .img5 {
         background: url(https://mms.businesswire.com/media/20201001005171/en/826460/5/4x3.jpg) center no-repeat;
     }
 }
-@media only screen and (max-width:700px){
-    .footer-images{
+
+@media only screen and (max-width:700px) {
+    .footer-images {
         height: 100px;
     }
 }
+
+@media (min-width: 700px) and (max-width: 1024px) {
+    .footer-images {
+        height: 240px;
+    }
+}
+
 // FOOTER--IMAGES--END
-
-
 // FOOTER--SECTION
-.foot{
+.foot {
     background-color: rgb(39, 36, 36);
     display: flex;
     justify-content: space-between;
     padding: 30px 60px;
-
-    .containt{
-            margin: auto;
-            width: 80%;
-            flex-direction: row;
-            display: flex;
-            justify-content: space-between;
-        .foot__text{
+    .containt {
+        margin: auto;
+        width: 80%;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        .foot-text {
             color: rgb(87, 87, 87);
             margin-left: 150px;
             font-size: 18px;
         }
-
-        .foot__nav{
+        .foot-nav {
             margin-right: 150px;
         }
-
-        ul{
+        ul {
             list-style: none;
             display: flex;
             flex-direction: row;
-
-            a{
+            a {
                 color: darkgrey;
                 list-style: none;
                 text-decoration: none;
                 font-size: 15px;
                 font-weight: bold;
                 text-transform: uppercase;
-                &:active{
+                &:active {
                     color: black;
                 }
             }
-            li{
+            li {
                 margin: 0px 10px;
             }
         }
     }
-    .click_to_top{
+    .click_to_top {
         background-color: rgb(180, 180, 180);
         width: 37px;
         height: 38px;
@@ -482,13 +477,15 @@
         font-size: 30px;
         cursor: pointer;
         margin-top: -27px;
+        color: white;
     }
 }
-@media only screen and (max-width:700px){
-    .foot{
+
+@media only screen and (max-width:700px) {
+    .foot {
         display: flex;
         flex-direction: column;
-        .click_to_top{
+        .click_to_top {
             background-color: grey;
             width: 35px;
             height: 30px;
@@ -499,35 +496,39 @@
             font-size: 30px;
             margin-left: 275px;
         }
-        .containt{
+        .containt {
             margin: 0px;
             display: flex;
             flex-direction: column;
             width: 100%;
-            .foot__nav{
+            .foot-nav {
                 width: 100%;
             }
-            .foot__text{
+            .foot-text {
                 text-align: center;
                 margin-left: 0px;
                 font-size: 12px;
             }
-            ul{
+            ul {
                 margin-top: 15px;
                 justify-content: center;
-                width:100%;
-                a{
+                width: 100%;
+                li {
+                    margin: 0px 8px;
+                }
+                a {
                     font-size: 12px;
                 }
             }
         }
     }
 }
-@media (min-width: 700px) and (max-width: 1024px){
-    .foot{
+
+@media (min-width: 700px) and (max-width: 1024px) {
+    .foot {
         display: flex;
         flex-direction: row;
-        .click_to_top{
+        .click_to_top {
             background-color: rgb(180, 180, 180);
             width: 44px;
             height: 35px;
@@ -539,32 +540,33 @@
             cursor: pointer;
             margin-top: 0px;
         }
-        .containt{
+        .containt {
             text-align: center;
             justify-content: center;
             align-content: center;
             align-items: center;
             width: 100%;
-            .foot__nav{
+            .foot-nav {
                 width: 100%;
                 margin-right: 0px;
             }
-            .foot__text{
+            .foot-text {
                 text-align: center;
                 margin: 0px;
                 width: 100%;
                 font-size: 17px;
                 color: rgb(221, 221, 221);
             }
-            ul{
+            ul {
                 margin-top: 0px;
                 justify-content: center;
-                width:100%;
-                a{
+                width: 100%;
+                a {
                     font-size: 15px;
                 }
             }
         }
     }
 }
+
 // FOOTER--SECTION--END

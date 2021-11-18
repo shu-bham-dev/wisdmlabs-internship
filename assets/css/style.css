@@ -4,60 +4,74 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
 .head {
-  margin: auto;
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  padding: 25px; }
-  .head .head__logo {
-    margin-left: 150px;
-    color: black;
-    font-weight: bold;
-    font-size: 20px; }
-  .head .head__nav {
-    margin-right: 150px; }
-  .head ul {
-    list-style: none;
-    display: flex;
+  padding: 30px 60px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  margin-top: -116px; }
+  .head .content {
+    margin: auto;
+    width: 80%;
     flex-direction: row;
-    font-family: monospace; }
-    .head ul a {
-      color: darkgrey;
-      list-style: none;
-      text-decoration: none;
-      font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .head .content .head-logo {
+      margin-left: 98px;
+      color: black;
       font-weight: bold;
-      text-transform: uppercase; }
-      .head ul a:active {
-        color: black; }
-    .head ul li {
-      margin: 0px 10px; }
+      font-size: 25px; }
+    .head .content .head-nav {
+      margin-right: 190px; }
+    .head .content ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      font-family: monospace; }
+      .head .content ul a {
+        color: darkgrey;
+        list-style: none;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase; }
+        .head .content ul a:active {
+          color: black; }
+      .head .content ul li {
+        margin: 0px 10px; }
 
 @media only screen and (max-width: 700px) {
   .head {
-    width: 90%; }
-    .head .head__logo {
-      margin: 0px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between; }
-    .head .option__img {
-      background: url(https://icons.veryicon.com/png/o/business/financial-linear-icon/option-3.png) no-repeat;
-      background-size: contain;
-      height: 27px;
-      width: 50px;
-      cursor: pointer; }
-    .head .head__nav {
-      display: none; } }
+    width: 85%; }
+    .head .content {
+      width: 100%;
+      align-items: center; }
+      .head .content .head-logo {
+        margin-left: -33px;
+        font-size: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+      .head .content .option-img {
+        background: url(https://static.thenounproject.com/png/703781-200.png) no-repeat;
+        background-size: cover;
+        height: 63px;
+        width: 63px;
+        cursor: pointer; }
+      .head .content .head-nav {
+        display: none; } }
 @media (min-width: 700px) and (max-width: 1024px) {
   .head {
     width: 90%; }
-    .head .head__nav {
+    .head .head-nav {
       display: none; }
-    .head .head__logo h3 {
+    .head .head-logo h3 {
       font-size: 50px;
       margin-left: -150px; }
-    .head .option__img {
+    .head .option-img {
       background: url(https://icons.veryicon.com/png/o/business/financial-linear-icon/option-3.png) no-repeat;
       background-size: contain;
       height: 50px;
@@ -66,27 +80,28 @@
 .feature {
   height: 600px;
   display: flex;
-  margin-bottom: 130px; }
-  .feature .feature__blocks {
+  margin-bottom: 130px;
+  margin-top: 116px; }
+  .feature .feature-blocks {
     width: 30%;
     height: 100%; }
-    .feature .feature__blocks .block {
+    .feature .feature-blocks .block {
       background-color: #9e929e;
       height: 48.5%; }
-    .feature .feature__blocks .blocks__a {
+    .feature .feature-blocks .blocks-a {
       margin: 0px 0px 16px 0px;
       background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
       background-size: cover; }
-    .feature .feature__blocks .blocks__b {
+    .feature .feature-blocks .blocks-b {
       background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) center no-repeat;
       background-size: cover; }
-    .feature .feature__blocks .right_a {
+    .feature .feature-blocks .right_a {
       background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
       background-size: cover; }
-    .feature .feature__blocks .right_b {
+    .feature .feature-blocks .right_b {
       background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
       background-size: cover; }
-  .feature .feature__middle {
+  .feature .feature-middle {
     width: 60%;
     height: 100%;
     background: url(http://images.placesonline.com/blog/Burano_1.jpg) center no-repeat;
@@ -95,20 +110,20 @@
     display: flex;
     align-items: center;
     justify-content: center; }
-    .feature .feature__middle .middle__box {
+    .feature .feature-middle .middle-box {
       width: 80%;
       background-color: rgba(0, 0, 0, 0.4);
       color: white;
       text-align: center;
       padding: 40px 15px; }
-      .feature .feature__middle .middle__box .middle__text {
+      .feature .feature-middle .middle-box .middle-text {
         text-indent: 50px;
         line-height: 25px; }
-      .feature .feature__middle .middle__box .heading {
+      .feature .feature-middle .middle-box .heading {
         text-transform: uppercase;
         margin: 10px;
         font-size: 35px; }
-      .feature .feature__middle .middle__box .btn-read {
+      .feature .feature-middle .middle-box .btn-read {
         background-color: rgba(0, 0, 0, 0);
         text-transform: uppercase;
         color: white;
@@ -124,17 +139,17 @@
     flex-direction: column;
     width: 100%;
     height: 1500px; }
-    .feature .feature__blocks {
+    .feature .feature-blocks {
       height: 40%;
       width: 100%;
       margin: 0px;
       display: flex;
       flex-direction: row; }
-      .feature .feature__blocks .block {
+      .feature .feature-blocks .block {
         height: 100%;
         width: 49%;
         margin-right: 20px; }
-    .feature .feature__middle {
+    .feature .feature-middle {
       width: 100%;
       margin: 25px 0px; } }
 @media only screen and (max-width: 700px) {
@@ -143,58 +158,58 @@
     flex-direction: column;
     width: 100%;
     height: 1500px; }
-    .feature .feature__blocks {
+    .feature .feature-blocks {
       height: 100%;
       width: 100%;
       margin: 0px; }
-    .feature .feature__middle {
+    .feature .feature-middle {
       width: 100%;
       margin: 18px 0px; }
-      .feature .feature__middle .middle__box {
+      .feature .feature-middle .middle-box {
         width: auto;
         height: 83%;
         display: flex;
         text-align: center;
         flex-direction: column;
         justify-content: center; }
-        .feature .feature__middle .middle__box .heading {
+        .feature .feature-middle .middle-box .heading {
           width: auto;
           font-size: 25px; }
-        .feature .feature__middle .middle__box .middle__text {
+        .feature .feature-middle .middle-box .middle-text {
           text-indent: 0px;
           line-height: 30px; }
-        .feature .feature__middle .middle__box .btn-read {
+        .feature .feature-middle .middle-box .btn-read {
           font-size: 22px; } }
 .articles {
   width: 65%;
   margin: auto;
   background-color: white; }
-  .articles .art__sections {
+  .articles .art-sections {
     display: flex;
     flex-direction: column;
     margin-top: 60px; }
-    .articles .art__sections .art__heads {
+    .articles .art-sections .art-heads {
       color: #2a2a2a;
       text-align: center;
       font-weight: bold;
       font-size: 34px;
       margin-bottom: -10px; }
-  .articles .article__row {
+  .articles .article-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
     margin-top: 40px; }
-    .articles .article__row .article__col {
+    .articles .article-row .article-col {
       height: 100%;
       width: 50%;
       display: flex;
       flex-direction: column;
       margin: 5px;
       margin-left: 20px; }
-      .articles .article__row .article__col .article__img {
+      .articles .article-row .article-col .article-img {
         height: 400px; }
-        .articles .article__row .article__col .article__img .article__cat {
+        .articles .article-row .article-col .article-img .article-cat {
           width: 100px;
           padding: 5px;
           text-align: center;
@@ -203,28 +218,28 @@
           color: #a3a2a2;
           left: 40%;
           top: 97%; }
-      .articles .article__row .article__col .img__a {
+      .articles .article-row .article-col .img-a {
         background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
         background-size: cover; }
-      .articles .article__row .article__col .img__b {
+      .articles .article-row .article-col .img-b {
         background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
         background-size: cover; }
-      .articles .article__row .article__col .article__heading {
+      .articles .article-row .article-col .article-heading {
         margin: 30px 0px 10px 5px;
         font-size: 20px;
         color: #5f5d5d;
         font-weight: 550; }
-      .articles .article__row .article__col .aricle__dateandtime {
+      .articles .article-row .article-col .aricle-dateandtime {
         margin: 5px;
         margin-top: 0px;
         color: #a3a2a2; }
-      .articles .article__row .article__col .article__desc {
+      .articles .article-row .article-col .article-desc {
         color: #a3a2a2;
         margin: 5px;
         margin-top: 20px;
         font-weight: 550;
         line-height: 25px; }
-      .articles .article__row .article__col .article__continue {
+      .articles .article-row .article-col .article-continue {
         text-transform: uppercase;
         margin: 20px 0px;
         cursor: pointer;
@@ -232,19 +247,19 @@
         font-weight: 600;
         color: #8d8d8d;
         font-size: 15px; }
-      .articles .article__row .article__col hr {
+      .articles .article-row .article-col hr {
         height: 1px;
         border-width: 0;
         background-color: #e2dfdf; }
-      .articles .article__row .article__col .article__comment {
+      .articles .article-row .article-col .article-comment {
         display: flex;
         flex-direction: row-reverse;
         justify-content: start; }
-        .articles .article__row .article__col .article__comment .comment__number {
+        .articles .article-row .article-col .article-comment .comment-number {
           color: #a3a2a2;
           margin: 20px 5px;
           font-weight: 500; }
-        .articles .article__row .article__col .article__comment .comment__icon {
+        .articles .article-row .article-col .article-comment .comment-icon {
           background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
           background-size: cover;
           width: 15px;
@@ -258,20 +273,20 @@
 @media only screen and (max-width: 700px) {
   .articles {
     width: 100%; }
-    .articles .article__row {
+    .articles .article-row {
       display: flex;
       flex-direction: column; }
-      .articles .article__row .article__col {
+      .articles .article-row .article-col {
         width: 95%;
         margin: auto; }
-        .articles .article__row .article__col .article__heading {
+        .articles .article-row .article-col .article-heading {
           margin: -35px 0px 10px 5px; }
-        .articles .article__row .article__col .article__img {
+        .articles .article-row .article-col .article-img {
           background-size: contain;
           margin-top: -30px;
           margin-right: 5px;
           margin-left: 5px; }
-          .articles .article__row .article__col .article__img .article__cat {
+          .articles .article-row .article-col .article-img .article-cat {
             width: 100px;
             padding: 5px;
             text-align: center;
@@ -281,10 +296,10 @@
             left: 35%;
             top: 80%; }
 
-  .articles .article__row .article__col .aricle__dateandtime {
+  .articles .article-row .article-col .aricle-dateandtime {
     margin-top: 10px; }
 
-  .art__heads {
+  .art-heads {
     margin: 0px; } }
 .footer-images {
   height: 300px;
@@ -307,6 +322,9 @@
 @media only screen and (max-width: 700px) {
   .footer-images {
     height: 100px; } }
+@media (min-width: 700px) and (max-width: 1024px) {
+  .footer-images {
+    height: 240px; } }
 .foot {
   background-color: #272424;
   display: flex;
@@ -318,11 +336,11 @@
     flex-direction: row;
     display: flex;
     justify-content: space-between; }
-    .foot .containt .foot__text {
+    .foot .containt .foot-text {
       color: #575757;
       margin-left: 150px;
       font-size: 18px; }
-    .foot .containt .foot__nav {
+    .foot .containt .foot-nav {
       margin-right: 150px; }
     .foot .containt ul {
       list-style: none;
@@ -349,7 +367,8 @@
     justify-content: center;
     font-size: 30px;
     cursor: pointer;
-    margin-top: -27px; }
+    margin-top: -27px;
+    color: white; }
 
 @media only screen and (max-width: 700px) {
   .foot {
@@ -370,9 +389,9 @@
       display: flex;
       flex-direction: column;
       width: 100%; }
-      .foot .containt .foot__nav {
+      .foot .containt .foot-nav {
         width: 100%; }
-      .foot .containt .foot__text {
+      .foot .containt .foot-text {
         text-align: center;
         margin-left: 0px;
         font-size: 12px; }
@@ -380,6 +399,8 @@
         margin-top: 15px;
         justify-content: center;
         width: 100%; }
+        .foot .containt ul li {
+          margin: 0px 8px; }
         .foot .containt ul a {
           font-size: 12px; } }
 @media (min-width: 700px) and (max-width: 1024px) {
@@ -403,10 +424,10 @@
       align-content: center;
       align-items: center;
       width: 100%; }
-      .foot .containt .foot__nav {
+      .foot .containt .foot-nav {
         width: 100%;
         margin-right: 0px; }
-      .foot .containt .foot__text {
+      .foot .containt .foot-text {
         text-align: center;
         margin: 0px;
         width: 100%;
