@@ -15,6 +15,7 @@
     background-color: white;
     flex-direction: column;
     margin-top: -116px;
+    z-index: 1;
     .content {
         margin: auto;
         width: 80%;
@@ -97,10 +98,10 @@
             }
         }
         .option-img {
-            background: url(https://icons.veryicon.com/png/o/business/financial-linear-icon/option-3.png) no-repeat;
+            background: url(https://static.thenounproject.com/png/703781-200.png) no-repeat;
             background-size: contain;
-            height: 50px;
-            width: 50px;
+            height: 70px;
+            width: 70px;
             cursor: pointer;
         }
     }
@@ -557,7 +558,7 @@ footer {
                 text-align: center;
                 margin: 0px;
                 width: 100%;
-                font-size: 17px;
+                font-size: 14px;
                 color: rgb(221, 221, 221);
             }
             ul {
