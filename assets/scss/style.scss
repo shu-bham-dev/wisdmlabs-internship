@@ -1,0 +1,528 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+$bgcolor: rgb(255, 255, 255);
+$dftfont: monospace;
+$feature--margin: 5px;
+$head--size: 20px;
+$head--color: rgb(42, 42, 42);
+$article--color: rgb(95, 93, 93);
+$article--items--color: rgb(163, 162, 162);
+// HEADER--SECTION
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    margin-top: -116px;
+    z-index: 1;
+    .content {
+        margin: auto;
+        width: 80%;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .head-logo {
+            margin-left: 98px;
+            color: black;
+            font-weight: bold;
+            font-size: 25px;
+            z-index: 1;
+        }
+        .head-nav {
+            margin-right: 190px;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            font-family: monospace;
+            .highlight {
+                color: rgb(88, 88, 88);
+            }
+            a {
+                color: darkgrey;
+                list-style: none;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: bold;
+                text-transform: uppercase;
+                &:active {
+                    color: black;
+                }
+            }
+            li {
+                margin: 0px 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .head {
+        width: 85%;
+        .content {
+            width: 100%;
+            align-items: center;
+            .head-logo {
+                margin-left: -47px;
+                font-size: 36px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .option-img {
+                background: url(https://static.thenounproject.com/png/703781-200.png) no-repeat;
+                background-size: cover;
+                height: 63px;
+                width: 63px;
+                cursor: pointer;
+            }
+            .head-nav {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1024px) {
+    .head {
+        width: 90%;
+        .head-nav {
+            display: none;
+        }
+        .head-logo {
+            h3 {
+                font-size: 50px;
+                margin-left: -150px;
+            }
+        }
+        .option-img {
+            background: url(https://static.thenounproject.com/png/703781-200.png) no-repeat;
+            background-size: contain;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+.slide-arrow {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    .r-arrow {
+        filter: grayscale(1) invert(1);
+    }
+    .right-arrow {
+        transform: rotate(180deg);
+        filter: grayscale(1) invert(1);
+    }
+}
+
+.slide-btn {
+    display: flex;
+    justify-content: flex-end !important;
+    width: 100%;
+    position: relative;
+    top: 20%;
+    align-items: flex-end;
+    margin-right: 25px;
+    padding-right: 10px;
+    margin-top: 50px;
+}
+
+// HEADER--SECTION--END
+// FEATURE--SECTION
+.feature {
+    height: 600px;
+    display: flex;
+    margin-bottom: 130px;
+    margin-top: 116px;
+    .feature-blocks {
+        width: 30%;
+        height: 100%;
+        .block {
+            background-color: rgb(158, 146, 158);
+            height: 48.7%;
+        }
+        .blocks-a {
+            margin: 0px 0px 16px 0px;
+            background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
+            background-size: cover;
+        }
+        .blocks-b {
+            background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) center no-repeat;
+            background-size: cover;
+        }
+        .right_a {
+            background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
+            background-size: cover;
+        }
+        .right_b {
+            background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
+            background-size: cover;
+        }
+    }
+    .feature-middle {
+        width: 60%;
+        height: 100%;
+        background-size: cover;
+        margin: 0px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .middle-box {
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            text-align: center;
+            padding: 40px 15px;
+            .middle-text {
+                text-indent: 50px;
+                line-height: 25px;
+            }
+            .heading {
+                text-transform: uppercase;
+                margin: 10px;
+                font-size: 35px;
+            }
+            .btn-read {
+                background-color: rgba(0, 0, 0, 0);
+                text-transform: uppercase;
+                color: white;
+                cursor: pointer;
+                font-weight: 600;
+                margin-top: 20px;
+                font-size: 22px;
+                border: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width:1024px) {
+    .feature {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 1500px;
+        .feature-blocks {
+            height: 40%;
+            width: 100%;
+            margin: 0px;
+            display: flex;
+            flex-direction: row;
+            .block {
+                height: 100%;
+                width: 49%;
+                margin-right: 20px;
+            }
+        }
+        .feature-middle {
+            width: 100%;
+            margin: 25px 0px;
+        }
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .feature {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 1500px;
+        .feature-blocks {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+        }
+        .feature-middle {
+            width: 100%;
+            margin: 18px 0px;
+            .middle-box {
+                width: auto;
+                height: 83%;
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                .heading {
+                    width: auto;
+                    font-size: 25px;
+                }
+                .middle-text {
+                    text-indent: 0px;
+                    line-height: 30px;
+                }
+                .btn-read {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+// FEATURE--SECTION--END
+.articles {
+    width: 68%;
+    margin: auto;
+    background-color: white;
+    .art-sections {
+        display: flex;
+        // flex-direction: column;
+        flex-direction: row;
+        //added-new
+        flex-wrap: wrap;
+        margin-top: 60px;
+        .art-heads {
+            color: rgb(42, 42, 42);
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px * 1.7;
+            margin-bottom: -10px;
+        }
+    }
+    .article-row {
+        display: flex;
+        flex-direction: row;
+        //added-new
+        flex: 50%;
+        align-items: center;
+        width: 100%;
+        margin-top: 40px;
+        .article-col {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            margin-left: 20px;
+            background: #f6f9fd;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+            .article-img {
+                height: 400px;
+                border-radius: 3%;
+                .article-cat {
+                    padding: 10px;
+                    width: 100px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: yellow;
+                    font-weight: 600;
+                    position: relative;
+                    background-color: #667eea;
+                    border-radius: 30px;
+                    left: 80%;
+                    top: 95%;
+                }
+            }
+            .img-a {
+                background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
+                background-size: cover;
+            }
+            .img-b {
+                background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
+                background-size: cover;
+            }
+            .article-heading {
+                margin: 30px 0px 0px $feature--margin;
+                font-size: $head--size;
+                color: rgb(1, 1, 92);
+                font-weight: 550;
+            }
+            .aricle-dateandtime {
+                display: flex;
+                margin: 5px;
+                margin-top: 0px;
+                color: darkblue;
+                font-size: 15px;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                .comment-number {
+                    margin: 4px 4px;
+                    font-weight: 900;
+                    color: #2c7a7b;
+                    font-size: 17px;
+                }
+            }
+            .article-desc {
+                color: darkblue;
+                margin: $feature--margin;
+                margin-top: 45px;
+                font-weight: 400;
+                line-height: 25px;
+            }
+            .article-continue {
+                text-transform: uppercase;
+                margin: $feature--margin*4 0px;
+                cursor: pointer;
+                display: inline;
+                font-weight: 600;
+                color: rgb(141, 141, 141);
+                font-size: 15px;
+            }
+            hr {
+                height: 1px;
+                border-width: 0;
+                background-color: rgb(226, 223, 223);
+            }
+            .article-comment {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: start;
+                .comment-icon {
+                    background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
+                    background-size: cover;
+                    width: 15px;
+                    height: 22px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .articles {
+        width: 95%;
+        background-color: $bgcolor;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .articles {
+        .art-sections {
+            display: flex;
+            flex-direction: column;
+            margin-top: 0px;
+        }
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .articles {
+        width: 96%;
+        .article-row {
+            display: flex;
+            flex-direction: column;
+            .article-col {
+                width: 95%;
+                margin: auto;
+                .article-heading {
+                    margin: -35px 0px 10px 5px;
+                }
+                .article-img {
+                    background-size: contain;
+                    margin-top: -76px;
+                    margin-right: 0px;
+                    margin-left: 0px;
+                    .article-cat {
+                        left: 65%;
+                        top: 76%;
+                    }
+                }
+            }
+        }
+    }
+    .articles .article-row .article-col .aricle-dateandtime {
+        margin-top: -5px;
+    }
+    .art-heads {
+        margin: 0px;
+    }
+}
+
+//RECENT--ARTICLE--SECTION--END
+// PAGINATION
+.active {
+    background-color: darkblue;
+    color: yellow;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+    font-size: 25px;
+    div {
+        text-align: center;
+        margin: 10px;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        border: 0.5px solid darkblue;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+// PAGINATION--END
+// SEARCHBOX
+.search-container {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 260px;
+}
+
+@media only screen and (max-width:700px) {
+    .search-container {
+        width: 100%;
+        margin: 0px;
+        margin-top: 100px;
+        .search-icon {
+            width: 73px;
+            top: 0px;
+            right: 0px;
+        }
+        input#search-bar {
+            margin: 0px -60px;
+            width: 94%;
+            margin-top: 10px;
+            height: 50px;
+            padding: 0px 0px;
+            font-size: 30px;
+            &:focus {
+                transition: 0.35s ease;
+                color: #282b2b;
+            }
+        }
+    }
+}
+
+input#search-bar {
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 25px;
+    text-indent: 50px;
+    font-weight: 600;
+    border: 0px;
+    box-shadow: 1px 3px 5px 0px #e6e6e6;
+    border-radius: 5px;
+    &:focus {
+        transition: 0.35s ease;
+        color: #282b2b;
+    }
+}
+
+.search-icon {
+    position: relative;
+    width: 75px;
+    top: -14px;
+    right: -80px;
+}

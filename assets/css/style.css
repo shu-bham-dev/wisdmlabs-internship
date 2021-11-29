@@ -1,0 +1,410 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  flex-direction: column;
+  margin-top: -116px;
+  z-index: 1; }
+  .head .content {
+    margin: auto;
+    width: 80%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .head .content .head-logo {
+      margin-left: 98px;
+      color: black;
+      font-weight: bold;
+      font-size: 25px;
+      z-index: 1; }
+    .head .content .head-nav {
+      margin-right: 190px; }
+    .head .content ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      font-family: monospace; }
+      .head .content ul .highlight {
+        color: #585858; }
+      .head .content ul a {
+        color: darkgrey;
+        list-style: none;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase; }
+        .head .content ul a:active {
+          color: black; }
+      .head .content ul li {
+        margin: 0px 10px; }
+
+@media only screen and (max-width: 700px) {
+  .head {
+    width: 85%; }
+    .head .content {
+      width: 100%;
+      align-items: center; }
+      .head .content .head-logo {
+        margin-left: -47px;
+        font-size: 36px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+      .head .content .option-img {
+        background: url(https://static.thenounproject.com/png/703781-200.png) no-repeat;
+        background-size: cover;
+        height: 63px;
+        width: 63px;
+        cursor: pointer; }
+      .head .content .head-nav {
+        display: none; } }
+@media (min-width: 700px) and (max-width: 1024px) {
+  .head {
+    width: 90%; }
+    .head .head-nav {
+      display: none; }
+    .head .head-logo h3 {
+      font-size: 50px;
+      margin-left: -150px; }
+    .head .option-img {
+      background: url(https://static.thenounproject.com/png/703781-200.png) no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      cursor: pointer; } }
+.slide-arrow {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer; }
+  .slide-arrow .r-arrow {
+    filter: grayscale(1) invert(1); }
+  .slide-arrow .right-arrow {
+    transform: rotate(180deg);
+    filter: grayscale(1) invert(1); }
+
+.slide-btn {
+  display: flex;
+  justify-content: flex-end !important;
+  width: 100%;
+  position: relative;
+  top: 20%;
+  align-items: flex-end;
+  margin-right: 25px;
+  padding-right: 10px;
+  margin-top: 50px; }
+
+.feature {
+  height: 600px;
+  display: flex;
+  margin-bottom: 130px;
+  margin-top: 116px; }
+  .feature .feature-blocks {
+    width: 30%;
+    height: 100%; }
+    .feature .feature-blocks .block {
+      background-color: #9e929e;
+      height: 48.7%; }
+    .feature .feature-blocks .blocks-a {
+      margin: 0px 0px 16px 0px;
+      background: url(https://www.oliverstravels.com/blog/wp-content/uploads/2018/03/Travelling-with-baby-header.jpg) center no-repeat;
+      background-size: cover; }
+    .feature .feature-blocks .blocks-b {
+      background: url(https://static.twentyoverten.com/5c0ac1006ab0ca459fa80cf5/E1P6wu6nNi/iStock-491963574.jpg) center no-repeat;
+      background-size: cover; }
+    .feature .feature-blocks .right_a {
+      background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
+      background-size: cover; }
+    .feature .feature-blocks .right_b {
+      background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
+      background-size: cover; }
+  .feature .feature-middle {
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    margin: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .feature .feature-middle .middle-box {
+      width: 80%;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      text-align: center;
+      padding: 40px 15px; }
+      .feature .feature-middle .middle-box .middle-text {
+        text-indent: 50px;
+        line-height: 25px; }
+      .feature .feature-middle .middle-box .heading {
+        text-transform: uppercase;
+        margin: 10px;
+        font-size: 35px; }
+      .feature .feature-middle .middle-box .btn-read {
+        background-color: rgba(0, 0, 0, 0);
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 20px;
+        font-size: 22px;
+        border: none; }
+
+@media (min-width: 700px) and (max-width: 1024px) {
+  .feature {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1500px; }
+    .feature .feature-blocks {
+      height: 40%;
+      width: 100%;
+      margin: 0px;
+      display: flex;
+      flex-direction: row; }
+      .feature .feature-blocks .block {
+        height: 100%;
+        width: 49%;
+        margin-right: 20px; }
+    .feature .feature-middle {
+      width: 100%;
+      margin: 25px 0px; } }
+@media only screen and (max-width: 700px) {
+  .feature {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 1500px; }
+    .feature .feature-blocks {
+      height: 100%;
+      width: 100%;
+      margin: 0px; }
+    .feature .feature-middle {
+      width: 100%;
+      margin: 18px 0px; }
+      .feature .feature-middle .middle-box {
+        width: auto;
+        height: 83%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center; }
+        .feature .feature-middle .middle-box .heading {
+          width: auto;
+          font-size: 25px; }
+        .feature .feature-middle .middle-box .middle-text {
+          text-indent: 0px;
+          line-height: 30px; }
+        .feature .feature-middle .middle-box .btn-read {
+          font-size: 22px; } }
+.articles {
+  width: 68%;
+  margin: auto;
+  background-color: white; }
+  .articles .art-sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px; }
+    .articles .art-sections .art-heads {
+      color: #2a2a2a;
+      text-align: center;
+      font-weight: bold;
+      font-size: 34px;
+      margin-bottom: -10px; }
+  .articles .article-row {
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px; }
+    .articles .article-row .article-col {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+      margin-left: 20px;
+      background: #f6f9fd;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      cursor: pointer; }
+      .articles .article-row .article-col .article-img {
+        height: 400px;
+        border-radius: 3%; }
+        .articles .article-row .article-col .article-img .article-cat {
+          padding: 10px;
+          width: 100px;
+          text-align: center;
+          text-transform: uppercase;
+          color: yellow;
+          font-weight: 600;
+          position: relative;
+          background-color: #667eea;
+          border-radius: 30px;
+          left: 80%;
+          top: 95%; }
+      .articles .article-row .article-col .img-a {
+        background: url(https://thumbs.dreamstime.com/b/two-happy-young-fashion-women-city-street-stylish-female-model-black-coats-201876545.jpg) center no-repeat;
+        background-size: cover; }
+      .articles .article-row .article-col .img-b {
+        background: url(https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180314163336/iStock-534569656-1-1024x682.jpg) center no-repeat;
+        background-size: cover; }
+      .articles .article-row .article-col .article-heading {
+        margin: 30px 0px 0px 5px;
+        font-size: 20px;
+        color: #01015c;
+        font-weight: 550; }
+      .articles .article-row .article-col .aricle-dateandtime {
+        display: flex;
+        margin: 5px;
+        margin-top: 0px;
+        color: darkblue;
+        font-size: 15px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center; }
+        .articles .article-row .article-col .aricle-dateandtime .comment-number {
+          margin: 4px 4px;
+          font-weight: 900;
+          color: #2c7a7b;
+          font-size: 17px; }
+      .articles .article-row .article-col .article-desc {
+        color: darkblue;
+        margin: 5px;
+        margin-top: 45px;
+        font-weight: 400;
+        line-height: 25px; }
+      .articles .article-row .article-col .article-continue {
+        text-transform: uppercase;
+        margin: 20px 0px;
+        cursor: pointer;
+        display: inline;
+        font-weight: 600;
+        color: #8d8d8d;
+        font-size: 15px; }
+      .articles .article-row .article-col hr {
+        height: 1px;
+        border-width: 0;
+        background-color: #e2dfdf; }
+      .articles .article-row .article-col .article-comment {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: start; }
+        .articles .article-row .article-col .article-comment .comment-icon {
+          background: url(https://static.thenounproject.com/png/638755-200.png) center no-repeat;
+          background-size: cover;
+          width: 15px;
+          height: 22px;
+          margin-top: 15px; }
+
+@media only screen and (max-width: 1024px) {
+  .articles {
+    width: 95%;
+    background-color: white; } }
+@media only screen and (max-width: 700px) {
+  .articles .art-sections {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px; } }
+@media only screen and (max-width: 700px) {
+  .articles {
+    width: 96%; }
+    .articles .article-row {
+      display: flex;
+      flex-direction: column; }
+      .articles .article-row .article-col {
+        width: 95%;
+        margin: auto; }
+        .articles .article-row .article-col .article-heading {
+          margin: -35px 0px 10px 5px; }
+        .articles .article-row .article-col .article-img {
+          background-size: contain;
+          margin-top: -76px;
+          margin-right: 0px;
+          margin-left: 0px; }
+          .articles .article-row .article-col .article-img .article-cat {
+            left: 65%;
+            top: 76%; }
+
+  .articles .article-row .article-col .aricle-dateandtime {
+    margin-top: -5px; }
+
+  .art-heads {
+    margin: 0px; } }
+.active {
+  background-color: darkblue;
+  color: yellow; }
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  justify-content: center;
+  font-size: 25px; }
+  .pagination div {
+    text-align: center;
+    margin: 10px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    border: 0.5px solid darkblue;
+    border-radius: 5px;
+    cursor: pointer; }
+
+.search-container {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 260px; }
+
+@media only screen and (max-width: 700px) {
+  .search-container {
+    width: 100%;
+    margin: 0px;
+    margin-top: 100px; }
+    .search-container .search-icon {
+      width: 73px;
+      top: 0px;
+      right: 0px; }
+    .search-container input#search-bar {
+      margin: 0px -60px;
+      width: 94%;
+      margin-top: 10px;
+      height: 50px;
+      padding: 0px 0px;
+      font-size: 30px; }
+      .search-container input#search-bar:focus {
+        transition: 0.35s ease;
+        color: #282b2b; } }
+input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 25px;
+  text-indent: 50px;
+  font-weight: 600;
+  border: 0px;
+  box-shadow: 1px 3px 5px 0px #e6e6e6;
+  border-radius: 5px; }
+  input#search-bar:focus {
+    transition: 0.35s ease;
+    color: #282b2b; }
+
+.search-icon {
+  position: relative;
+  width: 75px;
+  top: -14px;
+  right: -80px; }
+
+/*# sourceMappingURL=style.css.map */
