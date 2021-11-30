@@ -129,14 +129,11 @@ $article--items--color: rgb(163, 162, 162);
 
 .slide-btn {
     display: flex;
-    justify-content: flex-end !important;
+    justify-content: flex-end;
     width: 100%;
-    position: relative;
-    top: 20%;
     align-items: flex-end;
-    margin-right: 25px;
-    padding-right: 10px;
-    margin-top: 50px;
+    position: absolute;
+    top: 90%;
 }
 
 // HEADER--SECTION--END
@@ -180,6 +177,7 @@ $article--items--color: rgb(163, 162, 162);
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: relative;
         .middle-box {
             width: 80%;
             background-color: rgba(0, 0, 0, 0.4);
