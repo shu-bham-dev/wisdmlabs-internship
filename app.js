@@ -75,23 +75,29 @@ function populateSearch(filterPost, str) {
     let postArray = '';
     let lengthofPost = filterPost.length;
     PageNumbers(filterPost);
-    for (let i = (4 * str); i < ((4 * str) + 4) && i < lengthofPost; i++) {
-        console.log("num");
-        postArray += "<div class='article-row'>" +
-            "<div class='article-col'>" +
-            `<div class='article-img img-a' style= "background-image: url(${filterPost[i].img});">` +
-            "<div class='article-cat'>" + filterPost[i].category + "</div>" +
-            "</div>" +
-            "<p class='article-heading'>" + filterPost[i].title + "</p>" +
-            "<div class='aricle-dateandtime'>" + "<div class'combine'>" + `${filterPost[i].datetime}` + " " + "<strong class='author'>" + "&nbsp&nbsp/ By: " + filterPost[i].author + "</strong>" + "</div>" +
-            "<p class='comment-number'>" + filterPost[i].comment_count + " comments" + "</p>" +
-            "</div>" +
-            "<p class='article-desc'>" + filterPost[i].desc + "</p>" +
-            "</div></div></div>";
-    }
+    if (lengthofPost == 0) {
+        articles.innerHTML = `<h1> Sorry, No Post Available.</h1>`
+    } else {
+        for (let i = (4 * str); i < ((4 * str) + 4) && i < lengthofPost; i++) {
+            time = 1;
+            postArray += `<div class='article-row'>
+                        <div class='article-col'>
+                        <div class='article-img img-a' style= "background-image: url(${filterPost[i].img});">
+                        <div class='article-cat'> ${filterPost[i].category} </div>
+                        </div>
+                        <p class='article-heading'>${filterPost[i].title} </p>
+                        <div class='aricle-dateandtime'> <div class'combine'> ${time} <strong class='author'> &nbsp&nbsp/ By: ${filterPost[i].author}</strong></div>
+                        <p class='comment-number'> ${filterPost[i].comment_count} comments </p>
+                        </div>
+                        <p class='article-desc'> ${filterPost[i].desc}</p>
+                        </div>
+                        </div>
+                        </div>`;
+        }
 
-    pagination_active_color(str);
-    articles.innerHTML = postArray;
+        pagination_active_color(str);
+        articles.innerHTML = postArray;
+    }
 }
 
 //Inserting the pagination-buttons according to content
@@ -119,7 +125,6 @@ function pagination(pagenum) {
 //page number active colors
 function pagination_active_color(start) {
     let actv_btn = document.getElementById(`page${start}`);
-    console.log(actv_btn, start);
     actv_btn.classList.add("active");
 }
 //Fetching Json data and appending the html.
@@ -131,36 +136,42 @@ function fetchdata(start) {
             success: function(data) {
                 datajson = data.posts;
                 for (let i = 4 * start; i < (4 * start) + 4 && i < datajson.length; i++) {
-                    //FORMAT- 28 MAR, 2014 1:13 a.m.
-                    var date = new Date(datajson[i].datetime * 1000);
-                    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                    var year = date.getFullYear();
-                    var month = months[date.getMonth()];
-                    var date = date.getDate();
-                    // var hour = date.getHours();
-                    // var min = date.getMinutes();
-                    // var sec = date.getSeconds();
-                    var time = date + ' ' + month + ' ' + year + ' ';
-                    console.log(time);
+                    time = timeCalc(datajson[i].datetime);
                     $(".art-sections").append(
-                        "<div class='article-row'>" +
-                        "<div class='article-col'>" +
-                        `<div class='article-img img-a' style= "background-image: url(${datajson[i].img});">` +
-                        "<div class='article-cat'>" + datajson[i].category + "</div>" +
-                        "</div>" +
-                        "<p class='article-heading'>" + datajson[i].title + "</p>" +
-                        "<div class='aricle-dateandtime'>" + "<div class'combine'>" + `${datajson[i].datetime}` + " " + "<strong class='author'>" + "&nbsp&nbsp/ By: " + datajson[i].author + "</strong>" + "</div>" +
-                        "<p class='comment-number'>" + datajson[i].comment_count + " comments" + "</p>" +
-                        "</div>" +
-                        "<p class='article-desc'>" + datajson[i].desc + "</p>" +
-                        "</div>" +
-                        "</div>" +
-                        "</div>"
-                    );
+                        `<div class='article-row'>
+                        <div class='article-col'>
+                        <div class='article-img img-a' style= "background-image: url(${datajson[i].img});">
+                        <div class='article-cat'> ${datajson[i].category} </div>
+                        </div>
+                        <p class='article-heading'>${datajson[i].title} </p>
+                        <div class='aricle-dateandtime'> <div class'combine'> ${time} <strong class='author'> &nbsp&nbsp/ By: ${datajson[i].author}</strong></div>
+                        <p class='comment-number'> ${datajson[i].comment_count} comments </p>
+                        </div>
+                        <p class='article-desc'> ${datajson[i].desc}</p>
+                        </div>
+                        </div>
+                        </div>`
+                    )
                 }
                 PageNumbers(datajson);
                 pagination_active_color(start);
             }
         });
     });
+}
+
+function timeCalc(unixTime) {
+    //FORMAT- 28 MAR, 2014 1:13 a.m.
+    var date = new Date(unixTime * 1000);
+    var year = date.getFullYear();
+    var month = date.toLocaleString('default', { month: 'short' });
+    var dates = date.getDate();
+
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'P.M' : 'A.M';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    return `${dates} ${month}, ${year} ${hours}:${minutes} ${ampm}`;
 }
