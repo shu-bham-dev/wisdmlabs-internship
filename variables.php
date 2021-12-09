@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+    define('PI',3.14);
     $var1 = "Shubham<br>";
     $var2 = 22;
     $var3 = 22.8;
@@ -22,6 +23,10 @@
     echo var_dump($var2);    
     echo "<br>";
     echo var_dump($var3);
+    echo "<br>";
+    echo "PI : <br>";
+    echo PI;
+    echo var_dump(PI);
     ?>
 </body>
 </html>
