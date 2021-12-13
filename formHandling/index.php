@@ -21,7 +21,7 @@
     $sql = "INSERT INTO `testphp` (`name`, `age`, `vision`, `color`, `other`, `dt`) VALUES ('$name', '$age', '$vision', '$color', '$other', current_timestamp());";
 
     if($conn->query($sql) == true){
-        echo "<h2> Successfully Submited</h2>";
+        echo "<center><h2> Successfully Submited</h2><center>";
     }else{
         echo "ERROR: $sql <br> $conn->error";
     }
