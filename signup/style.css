@@ -1,0 +1,115 @@
+html,
+body {
+    font-family: 'brandico', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    background-color: #292D32;
+}
+
+.para {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.styles {
+    font-size: 22px;
+    border-radius: 23px;
+    background: #292D32;
+    box-shadow: 19px 19px 38px #23262b, -19px -19px 38px #2f343a;
+    margin: 50px 5px;
+}
+
+.login {
+    width: 50%;
+    margin: auto;
+}
+
+button {
+    background-color: white;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    transition-duration: 0.38s;
+    background-color: #292D32;
+    color: white;
+    box-shadow: 19px 19px 38px #23262b, -19px -19px 38px #2f343a;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#edit,
+#logout {
+    font-size: 15px;
+    background-color: #292D32;
+    color: white;
+    box-shadow: 2px 2px 7px #40454e, 0px -10px 30px #40454e;
+}
+
+.head {
+    width: 50%;
+    font-size: 42px;
+    margin: auto;
+    text-decoration: underline;
+}
+
+form {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    padding: 10px 20px;
+    border-radius: 23px;
+    background: #292D32;
+    box-shadow: 19px 19px 38px #23262b, -19px -19px 38px #2f343a;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    border: 1px solid rgb(151, 151, 151);
+    font-size: 15px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #292D32;
+    color: #e4e4e4;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+
+button[type="submit"] {
+    margin: auto;
+    width: 50%;
+}
+
+.gender {
+    margin-bottom: 30px;
+}
