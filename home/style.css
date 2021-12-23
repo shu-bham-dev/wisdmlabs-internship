@@ -9,6 +9,10 @@ body {
     background-color: #292D32;
 }
 
+a {
+    color: white;
+}
+
 .para {
     width: 80%;
     margin: 50px auto;

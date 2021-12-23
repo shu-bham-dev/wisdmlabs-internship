@@ -4,31 +4,47 @@ class Login extends Dbh{
 
     protected function getUser($username,$pwd){
 
-        $sql = "SELECT `password` FROM `phptask` WHERE username = $username";
-      
+        // $sql = "SELECT `password` FROM `phptask` WHERE username = $username";
+        $sql = "SELECT password FROM phptask WHERE username = ?;";
         $result = $this->connect()->prepare($sql);
-        $result->execute();
 
-        if($result->rowCount()==0){
+        if(!$result->execute(array($username))) {
+            $result = null;
+            header("location: ../index.php?error=sqlfail");
+            exit();
+        }
+        
+        if($result->rowCount() == 0){
             $sql = null;
             header("location: ../index.php?error=usernotfound");
             exit();
+        }else{
+
+            $pass = $result->fetchAll(PDO::FETCH_ASSOC);
+            if($pass[0]['password'] == $pwd){
+                session_start();
+                $_SESSION["name"] = $username;
+                header("location: ../home");
+
+            }
+            // echo "Ok Done!";
+            // echo "<pre>";
+            // print_r($hlo[0]['password']);
+            // echo "</pre>";
         }
 
-        $password = $result->fetchAll(PDO::FETCH_ASSOC);
-        echo "$password";
-        $checkpass = password_verify($pwd,$password[0]["password"]);
+        // $checkpass = password_verify($pwd,$alldata[0]["password"]);
 
-        if($checkpass == false){
-            $sql = null;
-            header("location: ../index.php?error=wrongpassword");
-            exit();
+        // if($checkpass == false){
+        //     $sql = null;
+        //     header("location: ../index.php?error=wrongpassword");
+        //     exit();
 
-        }else if($checkpass == true){
-            $sql = "SELECT * FROM `phptask` WHERE username = $username";
-            echo "Hi guys";
-            session_start();   
-        }
+        // }else if($checkpass == true){
+        //     $sql = "SELECT * FROM `phptask` WHERE username = $username";
+        //     echo "Hi guys";
+        //     session_start();   
+        // }
 
         // if(!$stmt->execute(array($username,$email))){
         //     $stmt = null;

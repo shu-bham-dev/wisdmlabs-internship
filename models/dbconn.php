@@ -9,7 +9,7 @@ class Dbh{
             $password = '';
             $db = 'phptask';
             $conn = new PDO("mysql:host=$server; dbname=$db",$user, $password); 
-            return $conn;          
+            return $conn;         
 
         } catch (\Throwable $th) {
             

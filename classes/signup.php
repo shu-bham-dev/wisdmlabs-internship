@@ -2,9 +2,9 @@
 
 class Signup extends Dbh{
 
-    protected function setUser($username,$email,$password,$name,$phone){
-
-        $sql = "INSERT INTO `phptask` (`name`, `username`, `phone`, `gender`, `email`, `password`, `dt`) VALUES ('$name', '$username', '$phone', 'male', '$email', '$password', current_timestamp())";
+    protected function setUser($username,$email,$password,$name,$phone,$gender){
+        // $password = md5($password);
+        $sql = "INSERT INTO `phptask` (`name`, `username`, `phone`, `gender`, `email`, `password`, `dt`) VALUES ('$name', '$username', '$phone', '$gender', '$email', '$password', current_timestamp())";
       
         $result = $this->connect()->prepare($sql);
         $result->execute();

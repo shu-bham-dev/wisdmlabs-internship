@@ -1,9 +1,9 @@
 <?php
 
 include '/opt/lampp/htdocs/phpTask/models/form.php';
+session_start();
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,10 +15,19 @@ include '/opt/lampp/htdocs/phpTask/models/form.php';
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="nav">
-        <button id="logout">Log Out</button> 
-        <button id="edit">Edit Account</button>
-    </div>
+    <?php
+    if(isset($_SESSION["name"])){
+        echo "<h2>Hi ," ,$_SESSION['name'], "</h2>" ,"<h2>You are successfully logged in</h2>";
+    }
+    ?>
+    <?php
+    if(isset($_SESSION["name"])){
+    echo "<div class='nav'>
+        <button id='logout'><a href='../logout/index.php'>Log out</a></button> 
+        <button id='edit'>Edit Account</button></div>";
+    }
+    ?>
+
     <div class="para">
         <div class="para1 styles">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum
@@ -36,7 +45,7 @@ include '/opt/lampp/htdocs/phpTask/models/form.php';
         </div>
 
         <?php
-        if($status){
+        if(isset($_SESSION["name"])){
             echo "<div class='para2 styles'>
             <p> Sed vitae turpis ac nisi malesuada blandit. Quisque eu molestie eros. Donec
         facilisis hendrerit augue, eu adipiscing sem lacinia non. Integer
@@ -48,16 +57,17 @@ include '/opt/lampp/htdocs/phpTask/models/form.php';
         sit amet dignissim. Proin sit amet tortor ac odio varius dapibus nec at
         Sem.</p>
         </div>";
+        }else{
+        echo "<div class='login'>
+            <p>To read more, please
+                <button> <a href='../login/'>LOGIN</a></button> or
+                <button> <a href='../signup/'> REGISTER</a></button>
+            </p>
+        </div>";
         }
         ?>
 
 
-        <div class="login">
-            <p>To read more, please
-                <button> <a href="../login/">LOGIN</a></button> or
-                <button> <a href="../signup/"> REGISTER</a></button>
-            </p>
-        </div>
     </div>
 </body>
 </html>
