@@ -16,10 +16,6 @@ include '/opt/lampp/htdocs/phpTask/models/form.php';
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
-      <div class="nav">
-         <button id="logout">Log Out</button> 
-         <button id="edit">Edit Account</button>
-      </div>
       
       <div class="container">
          <div class="head">

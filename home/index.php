@@ -60,8 +60,8 @@ session_start();
         }else{
         echo "<div class='login'>
             <p>To read more, please
-                <button> <a href='../login/'>LOGIN</a></button> or
-                <button> <a href='../signup/'> REGISTER</a></button>
+                <button id='readmore'> <a href='../login/'>LOGIN</a></button> or
+                <button id='readmore'> <a href='../signup/'> REGISTER</a></button>
             </p>
         </div>";
         }

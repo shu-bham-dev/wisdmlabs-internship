@@ -60,3 +60,10 @@ button:hover {
     color: white;
     box-shadow: 2px 2px 7px #40454e, 0px -10px 30px #40454e;
 }
+
+#readmore {
+    font-size: 15px;
+    background-color: #000000;
+    color: white;
+    box-shadow: 2px 2px 7px #40454e, 0px -10px 30px #40454e;
+}

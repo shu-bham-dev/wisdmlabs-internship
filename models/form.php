@@ -26,7 +26,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    // Running error handlers and user signup
    $signup->signupUser();
-
+   session_start();
+   $_SESSION["name"] = $username;
+   
+   include_once "../controllers/mail.php";
+   $sendMail = new Sender($username,$email);
+   $sendMail->sendMail();
+   
+   
    //Going to back to front page
    header("location: ../home/index.php?error=none");
 
