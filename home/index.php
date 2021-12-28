@@ -17,18 +17,19 @@ session_start();
 <body>
     <?php
     if(isset($_SESSION["name"])){
-        echo "<h2>Hi ," ,$_SESSION['name'], "</h2>" ,"<h2>You are successfully logged in</h2>";
+        echo "<div class='afterlogin'><h2>Hi ," ,$_SESSION['name'], "</h2>" ,"<h2>You are successfully logged in</h2>";
     }
     ?>
     <?php
     if(isset($_SESSION["name"])){
     echo "<div class='nav'>
         <button id='logout'><a href='../logout/index.php'>Log out</a></button> 
-        <button id='edit'><a href='../editaccount/index.php'>Edit Account</a></button></div>";
+        <button id='edit'><a href='../editaccount/index.php'>Edit Account</a></button></div></div>";
     }
     ?>
 
     <div class="para">
+        <div class="title">Welcome to Web 3.0 - The Future</div>
         <div class="para1 styles">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum
         vehicula est vitae sollicitudin. Ut pulvinar ultricies posuere. Integer

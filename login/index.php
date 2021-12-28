@@ -32,6 +32,8 @@ include '/opt/lampp/htdocs/phpTask/models/login.php';
                <button type="submit">Login</button>
             </form>
 
+            <button class="fpass"> <a href="../fpass"> Forgot Password </a></button>
+
          </div>
       </div>
 </body>

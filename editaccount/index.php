@@ -2,9 +2,9 @@
 
 include '/opt/lampp/htdocs/phpTask/models/form.php';
 session_start();
-$_SESSION["changed"] = "notchanged";
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,12 +67,11 @@ $_SESSION["changed"] = "notchanged";
     ?>
 
     <?php
-    
-   if($_SESSION["changed"] == "changed"){
+    if($_SESSION["changed"] == "changed"){
     $message = "Account Information is updated successfully.";
     echo "<script type='text/javascript'>alert('$message');</script>";
    }
-
    ?>
+
 </body>
 </html>

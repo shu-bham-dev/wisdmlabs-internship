@@ -29,7 +29,12 @@ class Login extends Dbh{
                 $_SESSION["gender"] = $pass[0]['gender'];
                 $_SESSION["phone"] = $pass[0]['phone'];
                 $_SESSION["name"] = $pass[0]['name'];
+                $_SESSION["changed"] = "nochanged";
+
                 header("location: ../home");
+            }else{
+                $message = "Password is Wrong! Try Again";
+                echo "<script type='text/javascript'>alert('$message');</script>";
             }
         }
 

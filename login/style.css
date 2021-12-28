@@ -113,3 +113,14 @@ button[type="submit"] {
 .gender {
     margin-bottom: 30px;
 }
+
+.fpass {
+    display: block;
+    margin: auto;
+    background-color: white;
+}
+
+.fpass a {
+    color: black;
+    text-decoration: auto;
+}

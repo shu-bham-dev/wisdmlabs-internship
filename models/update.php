@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $name = $_POST["user_name"];
    $username = $_POST["user_username"];
    $phone = $_POST["phone"];
-   $gender = "male";
+   $gender = $_POST["user_gender"];
    $email = $_POST["user_email"];
    $password = $_POST["user_password"];
 
