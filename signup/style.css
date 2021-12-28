@@ -62,6 +62,7 @@ button:hover {
     font-size: 42px;
     margin: auto;
     text-decoration: underline;
+    text-align: center;
 }
 
 form {
@@ -87,29 +88,51 @@ input[type="time"],
 input[type="url"],
 textarea,
 select {
-    border: 1px solid rgb(151, 151, 151);
+    border: none;
+    border-bottom: 1px solid rgb(151, 151, 151);
     font-size: 15px;
     height: auto;
-    margin: 0;
+    margin: auto;
     outline: 0;
     padding: 10px;
-    width: 100%;
+    width: 55%;
     background-color: #292D32;
     color: #e4e4e4;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 30px;
 }
 
+label {
+    text-align: center;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
-    margin: 0 4px 8px 0;
+    margin: 0 4px 8px 60px;
 }
 
 button[type="submit"] {
     margin: auto;
     width: 50%;
+    margin-bottom: 20px;
 }
 
 .gender {
-    margin-bottom: 30px;
+    margin: auto;
+    margin-bottom: 18px;
+    display: flex;
+}
+
+.gotohome {
+    background-color: rgb(32, 31, 31);
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 3px;
+    width: 100px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+a {
+    color: white;
 }

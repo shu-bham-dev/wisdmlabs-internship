@@ -31,7 +31,7 @@ session_start();
         </div>
 
         <div class="gotohome">
-        <a href="../home">Home</a>
+        <a href="../home">Goto Home</a>
         </div>
     
         <div class="signup-form">
@@ -46,12 +46,11 @@ session_start();
                 <input type="tel" id="phone" name="phone" value="'.$_SESSION["phone"].'">
 
                 <div class="gender">
-                <label>Gender:</label><br>
+                <label>Gender:</label>
                     <input type="radio" id="male" value="male" name="user_gender">
                     <label for="male" class="light">Male</label>
-                    <br>
                     <input type="radio" id="female" value="female" name="user_gender">
-                    <label for="female" class="light">Female</label><br>
+                    <label for="female" class="light">Female</label>
                 </div>
 
                 <label for="email">Email:</label>

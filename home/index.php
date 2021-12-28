@@ -29,7 +29,7 @@ session_start();
     ?>
 
     <div class="para">
-        <div class="title">Welcome to Web 3.0 - The Future</div>
+        <div class="head">Welcome to Web 3.0 - The Future</div>
         <div class="para1 styles">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum
         vehicula est vitae sollicitudin. Ut pulvinar ultricies posuere. Integer

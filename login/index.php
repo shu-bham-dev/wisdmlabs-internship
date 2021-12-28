@@ -23,10 +23,10 @@ include '/opt/lampp/htdocs/phpTask/models/login.php';
          <div class="signup-form">
             <form action="index.php" method="post">
 
-               <label for="name">Username:</label>
+               <label for="name">Username</label>
                <input type="text" id="username" name="user_username">
 
-               <label for="password">Password:</label>
+               <label for="password">Password</label>
                <input type="password" id="password" name="user_password">
 
                <button type="submit">Login</button>

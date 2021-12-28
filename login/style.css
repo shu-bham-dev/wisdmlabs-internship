@@ -4,9 +4,10 @@ body {
     font-size: 1.5em;
     color: white;
     padding: 0;
-    margin: 0;
+    margin: 3px;
     font-size: 100%;
     background-color: #292D32;
+    text-align: center;
 }
 
 .para {
@@ -75,6 +76,11 @@ form {
     box-shadow: 19px 19px 38px #23262b, -19px -19px 38px #2f343a;
 }
 
+form[action="index.php"] {
+    padding: 90px;
+    width: 40%;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -87,17 +93,22 @@ input[type="time"],
 input[type="url"],
 textarea,
 select {
-    border: 1px solid rgb(151, 151, 151);
-    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid rgb(151, 151, 151);
+    font-size: 12px;
     height: auto;
-    margin: 0;
+    margin: auto;
     outline: 0;
     padding: 10px;
-    width: 100%;
+    width: 55%;
     background-color: #292D32;
     color: #e4e4e4;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 30px;
+}
+
+label {
+    text-align: center;
 }
 
 input[type="radio"],
@@ -108,6 +119,7 @@ input[type="checkbox"] {
 button[type="submit"] {
     margin: auto;
     width: 50%;
+    margin-top: 20px;
 }
 
 .gender {

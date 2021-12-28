@@ -73,3 +73,11 @@ button:hover {
     flex-direction: row;
     justify-content: space-around;
 }
+
+.para .head {
+    width: 50%;
+    font-size: 42px;
+    margin: auto;
+    text-decoration: underline;
+    text-align: center;
+}
