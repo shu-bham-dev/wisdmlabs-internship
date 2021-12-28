@@ -25,7 +25,6 @@ class Login extends Dbh{
                 session_start();
                 $_SESSION["name"] = $username;
                 header("location: ../home");
-
             }
             // echo "Ok Done!";
             // echo "<pre>";

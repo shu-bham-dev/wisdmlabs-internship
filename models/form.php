@@ -27,7 +27,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    // Running error handlers and user signup
    $signup->signupUser();
    session_start();
-   $_SESSION["name"] = $username;
+   $_SESSION["name"] = $name;
+   $_SESSION["username"] = $username;
+   $_SESSION["phone"] = $phone;
+   $_SESSION["gender"] = $gender;
+   $_SESSION["email"] = $email;
+   $_SESSION["password"] = $password;
    
    include_once "../controllers/mail.php";
    $sendMail = new Sender($username,$email);
@@ -35,7 +40,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    
    
    //Going to back to front page
-   header("location: ../home/index.php?error=none");
 
    // $exist = false;
    // if(($password == $con_password) && $exist==false){

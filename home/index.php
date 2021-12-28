@@ -24,7 +24,7 @@ session_start();
     if(isset($_SESSION["name"])){
     echo "<div class='nav'>
         <button id='logout'><a href='../logout/index.php'>Log out</a></button> 
-        <button id='edit'>Edit Account</button></div>";
+        <button id='edit'><a href='../editaccount/index.php'>Edit Account</a></button></div>";
     }
     ?>
 
