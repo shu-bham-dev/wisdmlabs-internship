@@ -5,7 +5,7 @@ class Login extends Dbh{
     protected function getUser($username,$pwd){
 
         // $sql = "SELECT `password` FROM `phptask` WHERE username = $username";
-        $sql = "SELECT password FROM phptask WHERE username = ?;";
+        $sql = "SELECT * FROM phptask WHERE username = ?;";
         $result = $this->connect()->prepare($sql);
 
         if(!$result->execute(array($username))) {
@@ -23,13 +23,14 @@ class Login extends Dbh{
             $pass = $result->fetchAll(PDO::FETCH_ASSOC);
             if($pass[0]['password'] == $pwd){
                 session_start();
-                $_SESSION["name"] = $username;
+                $_SESSION["username"] = $username;
+                $_SESSION["password"] = $pwd;
+                $_SESSION["email"] = $pass[0]['email'];
+                $_SESSION["gender"] = $pass[0]['gender'];
+                $_SESSION["phone"] = $pass[0]['phone'];
+                $_SESSION["name"] = $pass[0]['name'];
                 header("location: ../home");
             }
-            // echo "Ok Done!";
-            // echo "<pre>";
-            // print_r($hlo[0]['password']);
-            // echo "</pre>";
         }
 
         // $checkpass = password_verify($pwd,$alldata[0]["password"]);

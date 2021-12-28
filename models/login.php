@@ -4,7 +4,6 @@ $status = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    $status = false;
-   // include '/opt/lampp/htdocs/phpTask/models/dbconn.php';
 
    // Grabbing the data
    $username = $_POST["user_username"];
@@ -15,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    include_once "../classes/login.php";
    include_once "../controllers/login.php";
    $login = new LoginContr($username, $password);
-
+   
    // Running error handlers and user login
    $login->loginUser();
 
