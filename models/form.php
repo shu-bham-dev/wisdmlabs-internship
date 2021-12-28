@@ -34,6 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $_SESSION["email"] = $email;
    $_SESSION["password"] = $password;
    
+   //sending mail to users
    include_once "../controllers/mail.php";
    $sendMail = new Sender($username,$email);
    $sendMail->sendMail();
