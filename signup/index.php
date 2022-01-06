@@ -32,7 +32,7 @@ include '/opt/lampp/htdocs/phpTask/models/form.php';
                <input type="text" id="username" name="user_username">
 
                <label for="phone">Phone Number:</label>
-               <input type="tel" id="phone" name="phone">
+               <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}" placeholder="7007-592-373">
 
                <div class="gender">
                <label>Gender:</label><br>
@@ -46,8 +46,8 @@ include '/opt/lampp/htdocs/phpTask/models/form.php';
                <label for="email">Email:</label>
                <input type="email" id="mail" name="user_email">
 
-               <label for="password">Password:</label>
-               <input type="password" id="password" name="user_password">
+               <label for="password"  >Password:</label>
+               <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 
                <label for="cnf-password">Confirm Password:</label>
                <input type="password" id="cnf-password" name="user_cnf_password">
