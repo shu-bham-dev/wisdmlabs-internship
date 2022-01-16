@@ -1,6 +1,6 @@
 <?php
 
-include '/opt/lampp/htdocs/phpTask/models/login.php';
+include '../models/login.php';
 
 ?>
 

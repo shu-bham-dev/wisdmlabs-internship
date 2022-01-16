@@ -3,8 +3,7 @@
 $status = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
    
-   $status = false;
-   // include '/opt/lampp/htdocs/phpTask/models/dbconn.php';
+   // $status = false;
    // echo "<pre>";
    // print_r($_POST);
    // echo "</pre>";

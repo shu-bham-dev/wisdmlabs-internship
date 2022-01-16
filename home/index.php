@@ -1,6 +1,6 @@
 <?php
 
-include '/opt/lampp/htdocs/phpTask/models/form.php';
+include '../models/form.php';
 session_start();
 
 ?>

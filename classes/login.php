@@ -21,7 +21,7 @@ class Login extends Dbh{
         }else{
 
             $pass = $result->fetchAll(PDO::FETCH_ASSOC);
-            if($pass[0]['password'] == $pwd){
+            if($pass[0]['password'] == md5($pwd)){
                 session_start();
                 $_SESSION["username"] = $username;
                 $_SESSION["password"] = $pwd;
