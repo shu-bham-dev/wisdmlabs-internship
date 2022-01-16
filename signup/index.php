@@ -24,7 +24,7 @@ include '../models/form.php';
 
       <!-- REGISTRATION -- FORM -->
          <div class="signup-form">
-            <form action="index.php" method="post">
+            <form name="formName" action="index.php" method="post" onsubmit="return validateForm()">
                <label for="name">Name:</label>
                <input type="text" id="name" name="user_name">
 
@@ -52,10 +52,10 @@ include '../models/form.php';
                <label for="cnf-password">Confirm Password:</label>
                <input type="password" id="cnf-password" name="user_cnf_password">
 
-               <button type="submit">Sign Up</button>
+               <button type="submit" >Sign Up</button>
             </form>
-
          </div>
       </div>
+      <script src="formvalidator.js"></script>
    </body>
 </html>
