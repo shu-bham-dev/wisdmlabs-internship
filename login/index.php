@@ -28,7 +28,8 @@ include '../models/login.php';
 
                <label for="password">Password</label>
                <input type="password" id="password" name="user_password">
-
+               
+               <div id="errormsg">HI</div>
                <button type="submit">Login</button>
             </form>
 

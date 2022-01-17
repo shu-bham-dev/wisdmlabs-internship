@@ -1,29 +1,38 @@
 function validateForm() {
-    let name = document.forms["formName"]["user_name"].value;
-    let username = document.forms["formName"]["user_username"].value;
-    let gender = document.forms["formName"]["user_gender"].value;
-    let email = document.forms["formName"]["user_email"].value;
-    let pass = document.forms["formName"]["user_password"].value;
-    let cnfpass = document.forms["formName"]["user_cnf_password"].value;
+    let name = document.getElementById("name").value;
+    let username = document.getElementById("username").value;
+    let gender = document.getElementById("gender").value;
+    let email = document.getElementById("mail").value;
+    let pass = document.getElementById("password").value;
+    let cnfpass = document.getElementById("cnf-password").value;
+    let phone = document.getElementById("phone").value;
 
     if (cnfpass != pass) {
-        alert("Password do not Match");
+        alert("Password Must be match");
         return false;
     }
     if (name == "") {
-        alert("Enter your name ");
+        alert("Name field can not be empty! ");
         return false;
     }
     if (username == "") {
-        alert("Enter your username ");
+        alert("Username field can not be empty! ");
         return false;
     }
     if (gender == "") {
-        alert("Enter your gender ");
+        alert("gender field can not be empty! ");
         return false;
     }
     if (email == "") {
-        alert("Enter your email");
+        alert("email field can not be empty! ");
+        return false;
+    }
+    if (phone.length != 10) {
+        alert("Phone number must be 10 digits ");
+        return false;
+    }
+    if ((phone[0] != '9') && (phone[0] != '8') && (phone[0] != '7') && (phone[0] != '6') && (phone.match(/^[0-9]+$/) != null)) {
+        alert("Phone number should starts with 9/8/7/6 ");
         return false;
     }
 }

@@ -32,15 +32,15 @@ include '../models/form.php';
                <input type="text" id="username" name="user_username">
 
                <label for="phone">Phone Number:</label>
-               <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="7007592373">
+               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits"  placeholder="7007592373">
 
                <div class="gender">
-               <label>Gender:</label><br>
-                <input type="radio" id="male" value="male" name="user_gender">
-                <label for="male" class="light">Male</label>
-                <br>
-                <input type="radio" id="female" value="female" name="user_gender">
-                <label for="female" class="light">Female</label><br>
+               <label for="cars">Choose your gender:</label>
+               <select name="user_gender" id="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="transgender">Other</option>
+               </select>
                </div>
 
                <label for="email">Email:</label>

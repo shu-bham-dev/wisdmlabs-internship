@@ -10,13 +10,20 @@ class Login extends Dbh{
 
         if(!$result->execute(array($username))) {
             $result = null;
-            header("location: ../index.php?error=sqlfail");
+            $message = "Server Error";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            // header("location: ../index.php?error=sqlfail");
             exit();
         }
         
         if($result->rowCount() == 0){
             $sql = null;
-            header("location: ../index.php?error=usernotfound");
+            $message = "User not found!";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            // echo "<script type='text/javascript'>
+            // document.getElementById('errormsg').innerHTML = 'User Not Found!'; 
+            // </script>";
+            // header("location: ../login");
             exit();
         }else{
 

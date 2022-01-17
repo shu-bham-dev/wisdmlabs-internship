@@ -21,6 +21,8 @@ class Signup extends Dbh{
 
         if(!$stmt->execute(array($username,$email))){
             $stmt = null;
+            $message = "Unable to check the user!";
+            echo "<script type='text/javascript'>alert('$message');</script>";
             header("location: ../index.php?error=stmtfailed");
             exit();
         }

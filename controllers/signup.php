@@ -22,46 +22,15 @@ class SignupContr extends Signup{
     }
 
     public function signupUser(){
-        if($this->emptyInput() == false){
-            header("location: .. /index.php?error=emptyinput");
-            exit();
-        }
-        
-        if($this->pwdMatch() == false){
-            header("location: .. /index.php?error=pwdMatch");
-            exit();
-        }
 
         if($this->usernameTakenCheck() == false){
-            header("location: .. /index.php?error=usernameTakenCheck");
+            $message = "Username is taken!";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+            // header("location: ../signup/index.php");
             exit();
         }
 
         $this->setUser($this->username,$this->email,$this->password,$this->name,$this->phone,$this->gender);
-    }
-    
-    private function emptyInput(){
-        $result;
-
-        if(empty($this->name) || empty($this->username) || empty($this->phone) || empty($this->email) || empty($this->password) || empty($this->con_password) || empty($this->gender)){
-            
-            $result = false;
-
-        }else{
-            $result = true;
-        }
-        return $result;
-    }
-
-    private function pwdMatch(){
-        $result;
-        if($this->password != $this->con_password){
-            $result = false;
-        }
-        else{
-            $result = true;
-        }
-        return $result;
     }
     
     private function usernameTakenCheck(){
@@ -74,5 +43,4 @@ class SignupContr extends Signup{
         }
         return $result;
     }
-
 }
