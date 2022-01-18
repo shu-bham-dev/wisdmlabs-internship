@@ -3,7 +3,6 @@
 class Dbh{
     protected function connect(){
         try {
-            
             $server = 'localhost';
             $user = 'root';
             $password = 'Golden0-';
@@ -12,8 +11,7 @@ class Dbh{
             return $conn;         
         } catch (\Throwable $th) {
             print "Error!: " . $e->getMessage() . "<br/>";
-            die();
-            
+            die(); 
         }
     }
 }

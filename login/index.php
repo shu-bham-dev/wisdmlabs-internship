@@ -15,9 +15,13 @@ include '../models/login.php';
 </head>
 <body>
 <div class="container">
-         <div class="head">
-            Welcome to Web 3.0 - The Future
-         </div>
+<div class='nav'>
+    <div class='head'>
+    Welcome to Web 3.0 - The Future
+</div><button id='home'><a href='../home'>Home</a></button></div></div>
+
+
+         <div class="infos"> <b class="headinfo">Login </b><br><p>Fill out your username and password</p></div>
 
       <!-- REGISTRATION -- FORM -->
          <div class="signup-form">
@@ -28,12 +32,10 @@ include '../models/login.php';
 
                <label for="password">Password</label>
                <input type="password" id="password" name="user_password">
-               
-               <div id="errormsg">HI</div>
                <button type="submit">Login</button>
             </form>
 
-            <button class="fpass"> <a href="../fpass"> Forgot Password </a></button>
+            <button class="fpass"> <a href="../forgot"> Forgot Password </a></button>
 
          </div>
       </div>

@@ -9,6 +9,20 @@ body {
     background-color: #f8f8f8;
 }
 
+.form-group {
+    width: 36%;
+    margin: auto;
+    background-color: #d5ebff;
+    padding: 35px;
+}
+
+.form-groups {
+    width: 36%;
+    margin: auto;
+    background-color: #d5ebff;
+    padding: 35px;
+}
+
 .para {
     width: 80%;
     margin: 50px auto;
@@ -50,6 +64,7 @@ button {
 form {
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 form[action="index.php"] {
@@ -90,10 +105,9 @@ input[type="checkbox"] {
     margin: 0 4px 8px 0;
 }
 
-button[type="submit"] {
-    margin: auto;
-    width: 50%;
-    margin-top: 20px;
+input[type="submit"] {
+    padding: 12px;
+    font-size: 18px;
 }
 
 .gender {

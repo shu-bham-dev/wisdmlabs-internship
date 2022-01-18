@@ -9,6 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $gender = $_POST["user_gender"];
    $email = $_POST["user_email"];
    $password = $_POST["user_password"];
+   $password = md5($password);
 
    include_once "../models/dbconn.php";
    include_once "../classes/update.php";

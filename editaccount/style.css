@@ -9,21 +9,8 @@ body {
     background-color: #f8f8f8;
 }
 
-.para {
-    width: 80%;
-    margin: 50px auto;
-}
-
-.styles {
-    font-size: 22px;
-    border-radius: 23px;
-    background: #292D32;
-    margin: 50px 5px;
-}
-
-.login {
-    width: 50%;
-    margin: auto;
+a {
+    color: white;
 }
 
 button {
@@ -34,23 +21,12 @@ button {
     font-size: 18px;
 }
 
+#edit,
+#logout,
 #home {
     font-size: 15px;
     background-color: #337ab7;
     margin: 13px;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-#edit,
-#logout {
-    font-size: 15px;
-    background-color: #292D32;
-    color: white;
-    box-shadow: 2px 2px 7px #40454e, 0px -10px 30px #40454e;
 }
 
 .nav {
@@ -65,11 +41,6 @@ button {
     margin-left: 50px;
     margin-right: 600px;
     margin-top: 20px
-}
-
-form {
-    display: flex;
-    flex-direction: column;
 }
 
 input[type="text"],
@@ -87,15 +58,11 @@ select {
     border: none;
     border-bottom: 1px solid rgb(151, 151, 151);
     font-size: 20px;
-    padding: 10px;
+    padding: 18px;
     background-color: #d5ebff;
     color: #000000;
     margin-bottom: 30px;
     font-weight: 600;
-}
-
-label {
-    font-size: 30px;
 }
 
 input[type="radio"],
@@ -109,30 +76,33 @@ button[type="submit"] {
     margin-bottom: 20px;
 }
 
-#gender {
-    width: 100%;
+.gender {
+    margin: auto;
+    margin-bottom: 18px;
+    display: flex;
 }
 
-.gotohome {
-    background-color: rgb(32, 31, 31);
-    border: 0;
-    padding: 10px 15px;
-    border-radius: 3px;
-    width: 100px;
+#username {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+}
+
+#username:hover {
     cursor: pointer;
-    font-size: 18px;
-}
-
-a {
-    color: white;
 }
 
 .signup-form {
     display: block;
-    width: 66%;
+    width: 55%;
     margin: auto;
     background-color: #d5ebff;
     padding: 45px 116px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 .infos {
@@ -144,6 +114,6 @@ a {
     font-size: 40px;
 }
 
-.warning {
-    color: red;
+label {
+    font-size: 30px;
 }

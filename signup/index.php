@@ -17,25 +17,30 @@ include '../models/form.php';
    </head>
    <body>
       
-      <div class="container">
-         <div class="head">
-            Welcome to Web 3.0 - The Future
+      
+      <div class='nav'>
+    <div class='head'>
+    Welcome to Web 3.0 - The Future
+</div><button id='home'><a href='../home'>Home</a></button></div></div>
+
+
+         <div class="infos"> <b class="headinfo">Registration Form </b><br><p>Fill out your information</p></div>
          </div>
 
       <!-- REGISTRATION -- FORM -->
          <div class="signup-form">
             <form name="formName" action="index.php" method="post" onsubmit="return validateForm()">
                <label for="name">Name:</label>
-               <input type="text" id="name" name="user_name">
+               <input type="text" id="name" name="user_name" title="should contains alphabets">
 
                <label for="name">Username:</label>
                <input type="text" id="username" name="user_username">
 
                <label for="phone">Phone Number:</label>
-               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits"  placeholder="7007592373">
+               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" pattern=[0-9]{10} placeholder="7007592373">
 
                <div class="gender">
-               <label for="cars">Choose your gender:</label>
+               <label for="gender">Choose your gender:</label>
                <select name="user_gender" id="gender">
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -48,6 +53,7 @@ include '../models/form.php';
 
                <label for="password">Password:</label>
                <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+               <p class="warning">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
 
                <label for="cnf-password">Confirm Password:</label>
                <input type="password" id="cnf-password" name="user_cnf_password">

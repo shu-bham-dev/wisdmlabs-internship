@@ -17,7 +17,7 @@ session_start();
 <body>
     <?php
     if(isset($_SESSION["name"])){
-        echo "<div class='afterlogin'><h2>Hi ," ,$_SESSION['name'], "</h2>" ,"<h2>You are successfully logged in</h2>";
+        echo "<div class='afterlogin'><h2>Hi " ,$_SESSION['name'], " ,You are successfully logged in</h2>";
     }
     ?>
     <?php

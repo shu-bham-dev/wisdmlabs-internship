@@ -31,8 +31,16 @@ function validateForm() {
         alert("Phone number must be 10 digits ");
         return false;
     }
+    var letters = /^[A-Za-z]+$/;
     if ((phone[0] != '9') && (phone[0] != '8') && (phone[0] != '7') && (phone[0] != '6') && (phone.match(/^[0-9]+$/) != null)) {
         alert("Phone number should starts with 9/8/7/6 ");
+        return false;
+    }
+
+    if (name.match(letters)) {
+        return true;
+    } else {
+        alert(" Name must contain letters ");
         return false;
     }
 }

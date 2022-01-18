@@ -7,6 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    // Grabbing the data
    $username = $_POST["user_username"];
+   $username = filter_var($username, FILTER_SANITIZE_STRING);
    $password = $_POST["user_password"];
 
    // Instantiate SignupContrl class

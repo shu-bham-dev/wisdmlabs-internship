@@ -10,7 +10,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    // exit();
    // Grabbing the data
    $name = $_POST["user_name"];
+   $name = filter_var($name, FILTER_SANITIZE_STRING);
    $username = $_POST["user_username"];
+   $username = filter_var($username, FILTER_SANITIZE_STRING);
    $phone = $_POST["phone"];
    $gender = $_POST["user_gender"];
    $email = $_POST["user_email"];

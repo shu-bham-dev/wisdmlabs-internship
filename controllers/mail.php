@@ -28,7 +28,7 @@ class Sender{
                 $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
                 $mail->Username   = 'singhforbing@gmail.com';                     //SMTP username
-                $mail->Password   = 'Shubham-sahu1@';                               //SMTP password
+                $mail->Password   = 'Shubham-sahu1@';                             //SMTP password
                 $mail->SMTPSecure = 'PHPMailer::ENCRYPTION_SMTPS';            //Enable implicit TLS encryption
                 $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -39,7 +39,7 @@ class Sender{
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
                 $mail->Subject = $this->username;
-                $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+                $mail->Body    = 'Successfully Registered';
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                 $mail->send();
@@ -54,5 +54,7 @@ class Sender{
     }
 
 }
+
+
 
 ?>
