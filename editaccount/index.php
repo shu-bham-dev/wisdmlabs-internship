@@ -36,12 +36,15 @@ session_start();
                 <form action="../models/update.php" method="post" onsubmit="return validateForm()">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name" value="'.$_SESSION["name"].'">
+                <span id="nameInfo" class="text-danger"> </span>
 
                 <label for="name">Username:</label>
-                <input type="text" class="fixed" id="username" name="user_username" value="'.$_SESSION["username"].'" readonly>
+                <input type="text" class="fixed" id="username" pattern=[0-9]{10} name="user_username" value="'.$_SESSION["username"].'" readonly>
 
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" value="'.$_SESSION["phone"].'">
+                <span id="phoneInfo" class="text-danger"> </span>
+
 
                 <label for="gender">Choose your gender:</label>
                <select name="user_gender" id="gender">
@@ -52,23 +55,22 @@ session_start();
 
                 <label for="email">Email:</label>
                 <input type="email" id="mail" name="user_email" value="'.$_SESSION["email"].'">
+                <span id="emailInfo" class="text-danger"> </span>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="user_password" value="'.$_SESSION["password"].'">
 
-                <button type="submit">Update</button>
+                <button type="submit" id="submitform">Update</button>
                 </form>
-        </div>
-    </div>';
-    ?>
-    <script src="../signup/formvalidator.js"></script>
+                </div></div>';
+                
+                ?>
+                
+                <?php
+                if($_SESSION["changed"] == "changed"){
+                    $message = "Account Information is updated successfully.";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                }
+                ?>
 
-    <?php
-    if($_SESSION["changed"] == "changed"){
-    $message = "Account Information is updated successfully.";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-   }
-   ?>
-
+<script src="formvalidator.js"></script>
 </body>
 </html>

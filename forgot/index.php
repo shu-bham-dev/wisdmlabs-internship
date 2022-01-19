@@ -34,12 +34,10 @@ use PHPMailer\PHPMailer\PHPMailer;
                             $result = $conn->query($sql);
                             $row = $result->rowCount();
                             if ($row == "") {
-                                $error .= "User Not Found";
+                                echo "<style>center{color:red; font-weight:600;}</style><center>Invalid email / User not found!</center>";
+                                // exit();
                             }
-                        }
-                        if (0) {
-                            echo $error;
-                        } else {
+                            else {
 
                             $output = '';
                             //mktime(hour, minute, second, month, day, year, is_dst) - return unixtimestamp.
@@ -51,7 +49,6 @@ use PHPMailer\PHPMailer\PHPMailer;
                             // Insert Temp Table
                             $sql2 = "INSERT INTO `password_reset_temp` (`email`, `key`, `expDate`) VALUES ('" . $email . "', '" . $key . "', '" . $expDate . "')";
                             $res = $conn->query($sql2);
-
 
                             $output.='<p>Please click on the following link to reset your password.</p>';
                             //replace the site url
@@ -81,8 +78,9 @@ use PHPMailer\PHPMailer\PHPMailer;
                             if (!$mail->Send()) {
                                 echo "Mailer Error: " . $mail->ErrorInfo;
                             } else {
-                                echo "An email has been sent";
+                                echo "<style>center{color:red; font-weight:600;}</style><center>An email has been sent! Kindly check you inbox.</center>";
                             }
+                        }
                         }
                     }
                     ?>

@@ -7,11 +7,11 @@
     </head>
     <body>
 
-        <div class="container-fluid">
+        <div>
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
+                <div>
                     <?php
+                    $error="";
                     include('db.php');
                     if (isset($_GET["key"]) && isset($_GET["email"]) && isset($_GET["action"]) && ($_GET["action"] == "reset") && !isset($_POST["action"])) {
                         $key = $_GET["key"];
@@ -28,11 +28,15 @@
                         } else {
                             $row = $res11->fetchAll(PDO::FETCH_ASSOC);
                             // $expDate = $row['expDate'];
-                            $expDate = '2022-01-19 08:20:27';
+                            $expDate = '2022-01-25 08:20:27';
                             if ($expDate >= $curDate) {
                                 ?>
-
-                                <h2>Reset Password</h2>   
+<!-- <div class="container"> -->
+<div class='nav'>
+    <div class='head'>
+    Welcome to Web 3.0 - The Future
+</div><button id='home'><a href='../home'>Home</a></button></div>
+         <div class="infos"> <b class="headinfo">Reset Password </b><br><p>Change your password</p></div>
                                 <form method="post" action="" name="update">
 
                                     <input type="hidden" name="action" value="update" class="form-control"/>
@@ -40,12 +44,12 @@
 
                                     <div class="form-groups">
                                         <label><strong>Enter New Password:</strong></label>
-                                        <input type="password"  name="pass1" value="update" class="form-control"/>
+                                        <input type="password"  name="pass1" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                     </div>
 
                                     <div class="form-groups">
                                         <label><strong>Re-Enter New Password:</strong></label>
-                                        <input type="password"  name="pass2" value="update" class="form-control"/>
+                                        <input type="password"  name="pass2" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                     </div>
                                     <input type="hidden" name="email" value="<?php echo $email; ?>"/>
                                     <div class="form-groups">
@@ -84,8 +88,8 @@
 
                             // $message = "Congratulations! Your password has been updated successfully.";
                             // echo "<script type='text/javascript'>alert('$message');</script>";
-                            echo "<div class='error'><p>Congratulations! Your password has been updated successfully.</p><br>
-                            <button id='home'><a href='../home'>Home</a></button> ";
+                            echo "<div class='congo'><p>Congratulations! Your password has been updated successfully.</p><br>
+                            <button id='home'><a href='../login'>Login</a></button> ";
                             // header("location: ../home");
                         }
                     }

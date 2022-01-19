@@ -25,7 +25,13 @@ class SignupContr extends Signup{
 
         if($this->usernameTakenCheck() == false){
             $message = "Username is taken!";
-            echo "<script type='text/javascript'>alert('$message');</script>";
+            echo "<script type='text/javascript'>
+            if (window.confirm('$message')){
+                document.location = '../signup';
+            }else{
+                document.location = '../home';
+            }
+            </script>";
             // header("location: ../signup/index.php");
             exit();
         }

@@ -36,6 +36,11 @@ button {
     border-bottom: double;
 }
 
+.text-danger {
+    color: red;
+    font-weight: 600;
+}
+
 .head {
     font-size: 25px;
     margin-left: 50px;

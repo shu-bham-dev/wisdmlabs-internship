@@ -16,6 +16,11 @@ body {
     padding: 35px;
 }
 
+.congo {
+    margin: 50px auto;
+    width: 50%;
+}
+
 .form-groups {
     width: 36%;
     margin: auto;

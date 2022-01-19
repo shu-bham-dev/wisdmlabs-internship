@@ -2,12 +2,12 @@
 
 class editUser extends Dbh{
 
-    protected function editUserInfo($username,$phone,$email,$password,$gender,$name){
+    protected function editUserInfo($username,$phone,$email,$gender,$name){
 
-        $sql = "UPDATE `phptask` SET `name` = '$name' , `phone` = '$phone', `email` = '$email', `password` ='$password',`gender` ='$gender' WHERE `username` = '$username'";
-
+        // $password = $password;
+        $sql = "UPDATE `phptask` SET `name` = '$name' , `phone` = '$phone', `email` = '$email',`gender` ='$gender' WHERE `username` = '$username'";
         $result = $this->connect()->prepare($sql);
-        $result->execute();
+        // $result->execute();
 
         if(!($result->execute())){
               echo "Something went wrong!";
@@ -15,7 +15,6 @@ class editUser extends Dbh{
         }else{
             $message = "Account Information is updated successfully.";
             echo "<script type='text/javascript'>alert('$message');</script>";
-            
         }
       
         // $result = $this->connect()->prepare($sql);

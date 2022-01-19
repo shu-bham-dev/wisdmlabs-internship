@@ -32,12 +32,15 @@ include '../models/form.php';
             <form name="formName" action="index.php" method="post" onsubmit="return validateForm()">
                <label for="name">Name:</label>
                <input type="text" id="name" name="user_name" title="should contains alphabets">
+               <span id="nameInfo" class="text-danger"> </span>
 
                <label for="name">Username:</label>
                <input type="text" id="username" name="user_username">
+               <span id="usernameInfo" class="text-danger"> </span>
 
                <label for="phone">Phone Number:</label>
-               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" pattern=[0-9]{10} placeholder="7007592373">
+               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" placeholder="7007592373">
+               <span id="phoneInfo" class="text-danger"> </span>
 
                <div class="gender">
                <label for="gender">Choose your gender:</label>
@@ -46,17 +49,20 @@ include '../models/form.php';
                   <option value="female">Female</option>
                   <option value="transgender">Other</option>
                </select>
+               <span id="genderInfo" class="text-danger"> </span>
                </div>
 
                <label for="email">Email:</label>
                <input type="email" id="mail" name="user_email">
+               <span id="emailInfo" class="text-danger"> </span>
 
                <label for="password">Password:</label>
                <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-               <p class="warning">Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+               <span id="passInfo" class="text-danger"> </span>
 
                <label for="cnf-password">Confirm Password:</label>
                <input type="password" id="cnf-password" name="user_cnf_password">
+               <span id="cnfInfo" class="text-danger"> </span>
 
                <button type="submit" >Sign Up</button>
             </form>
