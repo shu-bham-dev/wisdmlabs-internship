@@ -21,22 +21,26 @@ body {
     margin: 50px 5px;
 }
 
+.text-danger {
+    color: red;
+}
+
 .login {
     width: 50%;
     margin: auto;
 }
 
 button {
-    padding: 10px 15px;
-    border-radius: 3px;
-    width: 200px;
-    cursor: pointer;
     font-size: 18px;
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
 }
 
 .nav {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
 
 #edit,
@@ -50,13 +54,6 @@ button {
 form {
     display: flex;
     flex-direction: column;
-}
-
-form[action="index.php"] {
-    padding: 50px;
-    width: 30%;
-    background-color: #d5ebff;
-    margin: auto;
 }
 
 input[type="text"],
@@ -73,16 +70,11 @@ textarea,
 select {
     border: none;
     border-bottom: 1px solid rgb(151, 151, 151);
-    font-size: 20px;
-    padding: 10px;
-    background-color: #d5ebff;
+    font-size: 16px;
     color: #000000;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-label {
-    font-size: 30px;
+    margin-bottom: 5px;
+    padding-top: 20px;
+    padding-right: 10px;
 }
 
 input[type="radio"],
@@ -92,8 +84,8 @@ input[type="checkbox"] {
 
 button[type="submit"] {
     margin: auto;
-    width: 50%;
-    margin-top: 20px;
+    background-color: dodgerblue;
+    color: white;
 }
 
 .gender {
@@ -113,27 +105,55 @@ button[type="submit"] {
 }
 
 .signup-form {
-    margin-top: 30px;
+    display: block;
+    margin: auto;
+    padding: 30px 50px;
+    border: 1px solid #dddddd;
+    width: 550px;
+    margin-top: 50px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 3px #eeeeee;
 }
 
 .infos {
     margin: auto;
-    width: 35%;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 a {
-    color: white;
+    color: rgb(0, 0, 0);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    background: dodgerblue;
 }
 
 .headinfo {
     font-size: 40px;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 50px;
-    border-bottom: double;
 }
 
 #home {
@@ -145,6 +165,10 @@ a {
 .head {
     font-size: 25px;
     margin-left: 50px;
-    margin-right: 600px;
-    margin-top: 20px
+    margin-right: 500px;
+    margin-top: 10px
+}
+
+hr {
+    margin: 0px;
 }

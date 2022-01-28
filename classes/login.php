@@ -1,5 +1,5 @@
 <?php
-
+include_once "../models/sessions.php";
 class Login extends Dbh{
 
     protected function getUser($username,$pwd){
@@ -18,25 +18,41 @@ class Login extends Dbh{
         
         if($result->rowCount() == 0){
             $sql = null;
-            $message = "User not found!";
-            echo "<script type='text/javascript'>alert('$message');</script>";
+            
+            // $message = "User not found!";
+            // echo "<script type='text/javascript'>alert('$message');</script>";
             // echo "<script type='text/javascript'>
             // document.getElementById('errormsg').innerHTML = 'User Not Found!'; 
             // </script>";
+
+            echo "<style>   center{ color: red;
+            margin-top: 5.5em;
+            position: absolute;
+            font-size: 20px;
+            width: 91em;}</style><center>User not found!</center>";
+
             // header("location: ../login");
-            exit();
-        }else{
+            // exit();
+        }
+        else{
 
             $pass = $result->fetchAll(PDO::FETCH_ASSOC);
             if($pass[0]['password'] == md5($pwd)){
-                session_start();
-                $_SESSION["username"] = $username;
-                $_SESSION["password"] = $pwd;
-                $_SESSION["email"] = $pass[0]['email'];
-                $_SESSION["gender"] = $pass[0]['gender'];
-                $_SESSION["phone"] = $pass[0]['phone'];
-                $_SESSION["name"] = $pass[0]['name'];
-                $_SESSION["changed"] = "nochanged";
+                $user = new stdClass();
+                $user->userid = $pass[0]['sno'];
+                $user->email = $pass[0]['email'];
+                $user->phone = $pass[0]['phone'];
+                $user->gender = $pass[0]['gender'];
+                $user->name = $pass[0]['name'];
+                $user->username = $pass[0]['username'];
+                Session::setSession($user);
+                // $_SESSION["username"] = $username;
+                // // $_SESSION["password"] = $pwd;
+                // $_SESSION["gender"] = $pass[0]['gender'];
+                // $_SESSION["phone"] = $pass[0]['phone'];
+                // $_SESSION["name"] = $pass[0]['name'];
+                // $_SESSION["userid"] = $pass[0]['sno'];
+                // $_SESSION["changed"] = "nochanged";
 
                 header("location: ../home");
             }else{

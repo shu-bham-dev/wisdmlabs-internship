@@ -22,7 +22,7 @@ class UpdateUser extends editUser{
 
     public function editUsers(){
 
-        $this->editUserInfo($this->username,$this->phone,$this->email,$this->gender,$this->name);
+        $this->editUserInfo($this->phone,$this->email,$this->gender,$this->name);
     }
 
 }

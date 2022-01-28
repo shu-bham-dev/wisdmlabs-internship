@@ -1,7 +1,6 @@
 <?php
 
-include '../models/form.php';
-session_start();
+include '../common.php';
 
 ?>
 
@@ -15,62 +14,68 @@ session_start();
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class='nav'>
+        <div class='head'>
+            Welcome to Web 3.0 - The Future</div>
+            <nav><ul> <li>
+                <a href='../home'>Home</a></li>
     <?php
-    echo "<div class='nav'>
-    <div class='head'>
-    Welcome to Web 3.0 - The Future
-</div><button id='home'><a href='../home'>Home</a></button> ";
     if(isset($_SESSION["name"])){
-    echo "
-        <button id='logout'><a href='../logout/index.php'>Log out</a></button> 
-        <button id='edit'>Edit Account</button></div>";
-    }
     ?>
-    
+        <li><a href='../logout/index.php'>Log out</a></li>
+        </ul></nav></div><hr>
+
     <?php
-    echo '
-    <div class="infos"> <b class="headinfo">Update account </b><br><p>Edit the information you want to change</p></div>
-    </div>
+    } ?>
+    
     <div class="container">
         <div class="signup-form">
-                <form action="../models/update.php" method="post" onsubmit="return validateForm()">
+    <h2 class="infos">Update Account</h2>
+    
+    <form action="../models/update.php" method="post" onsubmit="return validateForm()">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name" value="'.$_SESSION["name"].'">
+                <input type="text" id="name" name="user_name" value="<?php echo $_SESSION['name'];?>">
                 <span id="nameInfo" class="text-danger"> </span>
-
                 <label for="name">Username:</label>
-                <input type="text" class="fixed" id="username" pattern=[0-9]{10} name="user_username" value="'.$_SESSION["username"].'" readonly>
+                
+                <input type="text" class="fixed" id="username" pattern=[0-9]{10} name="user_username" value="<?php echo $_SESSION['username'];?>" readonly>
 
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" value="'.$_SESSION["phone"].'">
+                <input type="tel" id="phone" name="phone" value="<?php echo $_SESSION['phone'];?>">
                 <span id="phoneInfo" class="text-danger"> </span>
 
-
                 <label for="gender">Choose your gender:</label>
-               <select name="user_gender" id="gender">
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="transgender">Other</option>
-               </select>
+                <select name="user_gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Other</option>
+                </select>
 
                 <label for="email">Email:</label>
-                <input type="email" id="mail" name="user_email" value="'.$_SESSION["email"].'">
+                <input type="email" id="mail" name="user_email" value="<?php echo $_SESSION['email'];?>">
                 <span id="emailInfo" class="text-danger"> </span>
-
 
                 <button type="submit" id="submitform">Update</button>
                 </form>
-                </div></div>';
-                
-                ?>
-                
+                </div></div>
+
                 <?php
-                if($_SESSION["changed"] == "changed"){
-                    $message = "Account Information is updated successfully.";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
-                }
+                if(isset($_SESSION["changed"])) {
+                    if($_SESSION["changed"] == "changed"){
+                        $_SESSION["changed"] = "unchanged"
                 ?>
 
+                <style>
+                p{
+                    margin: auto;
+                    width: 18%;
+                    color:green;
+                    margin-top: -36.7em;
+                }
+                </style>
+
+                <p>Account information is updated successfully.</p>
+                <?php }}?>
 <script src="formvalidator.js"></script>
 </body>
 </html>

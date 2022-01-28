@@ -24,16 +24,30 @@ class SignupContr extends Signup{
     public function signupUser(){
 
         if($this->usernameTakenCheck() == false){
-            $message = "Username is taken!";
-            echo "<script type='text/javascript'>
-            if (window.confirm('$message')){
-                document.location = '../signup';
-            }else{
-                document.location = '../home';
-            }
-            </script>";
-            // header("location: ../signup/index.php");
-            exit();
+            // $message = "Username or Email already exist!";
+            // echo "<script type='text/javascript'>
+            // if (window.confirm('$message')){
+            //     document.location = '../signup';
+            // }else{
+            //     document.location = '../home';
+            // }
+            // </script>";
+            // $message = "Username or Email already exist!";
+            // echo "<script type='text/javascript'>
+            // document.getElementById('notified').innerHTML = 'User already exists';
+            // </script>";
+            session_start();
+            $_SESSION['error'] = "User already exist";
+            // echo "<style>center{ color: red;
+            //     margin-top: 5.5em;
+            //     position: absolute;
+            //     font-size: 20px;
+            //     width: 91em;}</style>
+            //     <a href='../signup'>Back</a>
+            //     <center>User already exist!</center>";
+            header("location: ../signup");
+            // exit();
+            die();
         }
 
         $this->setUser($this->username,$this->email,$this->password,$this->name,$this->phone,$this->gender);

@@ -1,6 +1,8 @@
 <?php
 
 include '../models/form.php';
+include '../models/sessions.php';
+Session::ifSession();
 
 ?>
 
@@ -11,24 +13,32 @@ include '../models/form.php';
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>PHP Task - Sign Up</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <link rel="stylesheet" href="style.css">
    </head>
    <body>
-      
-      
-      <div class='nav'>
-    <div class='head'>
-    Welcome to Web 3.0 - The Future
-</div><button id='home'><a href='../home'>Home</a></button></div></div>
 
-
-         <div class="infos"> <b class="headinfo">Registration Form </b><br><p>Fill out your information</p></div>
-         </div>
-
-      <!-- REGISTRATION -- FORM -->
+<div class='nav'>
+         <div class='head'>
+            Welcome to Web 3.0 - The Future</div>
+            <nav><ul><li>
+               <a href='../home'>Home</a></li><li><a href='../login'>Login</a></li></nav></div><hr>
+               <!-- REGISTRATION -- FORM -->
+         <div class="container">
          <div class="signup-form">
+         <h2 class="infos">Register Account</h2>
+         <h3 id="notified">
+
+         <?php
+            if(isset($_SESSION["error"])){
+               $error = $_SESSION["error"];
+               echo "<span>$error</span>";
+               session_unset();
+               session_destroy();
+            }
+         ?>
+         
+         </h3>
             <form name="formName" action="index.php" method="post" onsubmit="return validateForm()">
                <label for="name">Name:</label>
                <input type="text" id="name" name="user_name" title="should contains alphabets">
@@ -64,10 +74,23 @@ include '../models/form.php';
                <input type="password" id="cnf-password" name="user_cnf_password">
                <span id="cnfInfo" class="text-danger"> </span>
 
-               <button type="submit" >Sign Up</button>
+               <button id="sub"type="submit" >Sign Up</button>
             </form>
          </div>
       </div>
+      <!-- <script type="text/javascript">
+            $(document).ready(function(){
+               $("#sub").on("click",function(e){
+                  $.ajax({
+                     url: "same.php",
+                     type: "POST",
+                     success: function(data){
+                        $.("#notified").html(data);
+                     }
+                  });
+               });
+            });
+      </script> -->
       <script src="formvalidator.js"></script>
    </body>
 </html>

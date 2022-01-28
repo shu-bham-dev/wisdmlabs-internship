@@ -33,13 +33,13 @@ class Sender{
                 $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
-                $mail->setFrom('singhforbing@gmail.com', 'Mailer');
+                $mail->setFrom('singhforbing@gmail.com', 'Registration Successful');
                 $mail->addAddress($this->email);
 
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
                 $mail->Subject = $this->username;
-                $mail->Body    = 'Successfully Registered';
+                $mail->Body    = 'You are successfully registered';
                 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
                 $mail->send();

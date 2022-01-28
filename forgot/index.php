@@ -1,29 +1,23 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
+include '../models/sessions.php';
+Session::ifSession();
 ?>
 <html>
     <head>
         <title>Forgot Password</title>
-         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
          <link rel="stylesheet" href="style.css">
     </head>
     <body>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div ></div>
-                <div >
-
-                <div class="container">
-<div class='nav'>
-    <div class='head'>
-    Welcome to Web 3.0 - The Future
-</div><button id='home'><a href='../home'>Home</a></button></div></div>
-
-
-         <div class="infos"> <b class="headinfo">Forgot Password </b><br><p>Fill out your email to receive reset link</p></div>
-
-                    <?php
+    <div class='nav'>
+        <div class='head'>
+            Welcome to Web 3.0 - The Future</div>
+            <nav><ul><li>
+                <a href='../home'>Login</a></li>
+            </nav>
+        </div>
+        <hr>
+                <?php
                     include('db.php');
                     if (isset($_POST["email"]) && (!empty($_POST["email"]))) {
                         $email = $_POST["email"];
@@ -78,28 +72,37 @@ use PHPMailer\PHPMailer\PHPMailer;
                             if (!$mail->Send()) {
                                 echo "Mailer Error: " . $mail->ErrorInfo;
                             } else {
-                                echo "<style>center{color:red; font-weight:600;}</style><center>An email has been sent! Kindly check you inbox.</center>";
+                                echo "<style>center{color:green; font-weight:600;}</style><center>An email has been sent! Kindly check your inbox.</center>";
                             }
                         }
                         }
                     }
                     ?>
-                    <form method="post" action="" name="reset">
-                        
-
+             <div class="container">
+                <div class="signup-form">
+                  <h2 class="infos">Forgot Password</h2>
+                    <form method="post" action="" name="reset" onsubmit="return validateForm()">
                         <div class="form-group">
                            <label><strong>Enter Your Email Address:</strong></label>
-                            <input type="email" name="email" placeholder="username@email.com" class="form-control"/>
+                            <input type="email" id="mail" name="email" placeholder="Enter your email" class="form-control"/>
+                            <span id="emailInfo" class="text-danger"> </span>
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" id="reset" value="Reset Password"  class="btn btn-primary"/>
+                            <button type="submit" id="reset" value="Reset Password"> Submit </button>
                         </div>
                     </form>
-
                 </div>
-                <div class="col-md-4"></div>
             </div>
-        </div>
     </body>
+    <script>
+        function validateForm() {
+        let email = document.getElementById("mail").value;
+
+    if (email == "") {
+        document.getElementById('emailInfo').innerHTML = "<style>.text-danger{color:red;}</style><br>Email field can not be empty!";
+        return false;
+    }
+        }
+    </script>
 </html>

@@ -20,12 +20,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $change = new UpdateUser($name,$username,$phone,$email,$gender);
    $change->editUsers();
 
-   session_start();
-   $_SESSION["name"] = $name;
-   $_SESSION["username"] = $username;
-   $_SESSION["phone"] = $phone;
-   $_SESSION["gender"] = $gender;
-   $_SESSION["email"] = $email;
+   // session_start();
+   // $_SESSION["name"] = $name;
+   // $_SESSION["username"] = $username;
+   // $_SESSION["phone"] = $phone;
+   // $_SESSION["gender"] = $gender;
+   // $_SESSION["email"] = $email;
    // $_SESSION["password"] = $password;
    $_SESSION["changed"] = "changed";
 

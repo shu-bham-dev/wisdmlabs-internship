@@ -1,12 +1,9 @@
-
 <html>
     <head>
         <title>Reset Password</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-
         <div>
             <div class="row">
                 <div>
@@ -25,39 +22,50 @@
                         $row = $res11->rowCount();
                         if ($row == "") {
                             $error .= '<h2>Invalid Link</h2>';
+                            echo $error;
                         } else {
                             $row = $res11->fetchAll(PDO::FETCH_ASSOC);
-                            // $expDate = $row['expDate'];
-                            $expDate = '2022-01-25 08:20:27';
+                            $expDate = $row[0]['expDate'];
                             if ($expDate >= $curDate) {
                                 ?>
 <!-- <div class="container"> -->
-<div class='nav'>
+<!-- <div class='nav'>
     <div class='head'>
     Welcome to Web 3.0 - The Future
-</div><button id='home'><a href='../home'>Home</a></button></div>
-         <div class="infos"> <b class="headinfo">Reset Password </b><br><p>Change your password</p></div>
-                                <form method="post" action="" name="update">
+</div><button id='home'><a href='../home'>Home</a></button></div> -->
+
+<div class='nav'>
+        <div class='head'>
+            Welcome to Web 3.0 - The Future</div>
+            <nav><ul><li>
+                <a href='../home'>Home</a></li></nav></div><hr>
+
+
+<div class="container">
+    <div class="signup-form">
+    <h2 class="infos">Reset Password</h2>
+                                <form method="post" action="" name="update" onsubmit="return validateForm()">
 
                                     <input type="hidden" name="action" value="update" class="form-control"/>
-
-
                                     <div class="form-groups">
                                         <label><strong>Enter New Password:</strong></label>
-                                        <input type="password"  name="pass1" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                        <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="mail" name="pass1" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                        <span id="emailInfo" class="text-danger"> </span>
                                     </div>
 
                                     <div class="form-groups">
                                         <label><strong>Re-Enter New Password:</strong></label>
-                                        <input type="password"  name="pass2" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                        <input type="password" id="conmail" name="pass2" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                        <span id="conInfo" class="text-danger"> </span>
                                     </div>
                                     <input type="hidden" name="email" value="<?php echo $email; ?>"/>
                                     <div class="form-groups">
-                                        <input type="submit" id="reset" value="Reset Password"  class="btn btn-primary"/>
+                                        <button type="submit" id="reset" value="Reset Password">Submit</button>
                                     </div>
 
                                 </form>
-
+                            </div>
+                            </div>
 
                                 <?php
                             } else {
@@ -99,7 +107,24 @@
                 <div class="col-md-4"></div>
             </div>
         </div>
-
-
     </body>
+    <script>
+        function validateForm() {
+        let email = document.getElementById("mail").value;
+        let conmail = document.getElementById("conmail").value;
+
+    if (email == "") {
+        document.getElementById('emailInfo').innerHTML = "<style>.text-danger{color:red;}</style><br>Email field can not be empty!";
+        return false;
+    }
+    if (conmail == "") {
+        document.getElementById('conInfo').innerHTML = "<style>.text-danger{color:red;}</style><br>Email field can not be empty!";
+        return false;
+    }
+    if(conmail!=email){
+        document.getElementById('conInfo').innerHTML = "<style>.text-danger{color:red;}</style><br>Password do not match!";
+        return false;
+    }
+        }
+    </script>
 </html>

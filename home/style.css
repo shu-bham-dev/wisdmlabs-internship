@@ -11,6 +11,7 @@ body {
 
 a {
     color: white;
+    text-decoration: none;
 }
 
 .para {
@@ -29,11 +30,15 @@ a {
 }
 
 button {
-    padding: 10px 15px;
-    border-radius: 3px;
-    width: 200px;
-    cursor: pointer;
     font-size: 18px;
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
+}
+
+p {
+    font-size: 20px;
 }
 
 .nav {
@@ -44,21 +49,59 @@ button {
 #edit,
 #logout {
     font-size: 15px;
-    background-color: #337ab7;
+    background-color: dodgerblue;
     margin: 13px;
 }
 
+hr {
+    margin: 0px;
+}
+
+
+/* h3 {
+    font-size: 22px;
+} */
+
 #readmore {
     font-size: 15px;
-    background-color: #337ab7;
+    background-color: dodgerblue;
 }
 
 .afterlogin {
+    margin-left: 200px;
     display: flex;
+    align-items: baseline;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    border-bottom: double;
+}
+
+nav {
+    margin-left: 20em;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    flex-direction: row-reverse;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    background: dodgerblue;
 }
 
 .para .head {

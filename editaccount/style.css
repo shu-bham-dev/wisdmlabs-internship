@@ -10,15 +10,40 @@ body {
 }
 
 a {
-    color: white;
+    color: rgb(0, 0, 0);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #000000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    background: dodgerblue;
 }
 
 button {
-    padding: 10px 15px;
-    border-radius: 3px;
-    width: 200px;
-    cursor: pointer;
     font-size: 18px;
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
 }
 
 #edit,
@@ -32,8 +57,6 @@ button {
 .nav {
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
-    border-bottom: double;
 }
 
 .text-danger {
@@ -44,8 +67,8 @@ button {
 .head {
     font-size: 25px;
     margin-left: 50px;
-    margin-right: 600px;
-    margin-top: 20px
+    margin-right: 500px;
+    margin-top: 10px
 }
 
 input[type="text"],
@@ -62,12 +85,11 @@ textarea,
 select {
     border: none;
     border-bottom: 1px solid rgb(151, 151, 151);
-    font-size: 20px;
-    padding: 18px;
-    background-color: #d5ebff;
+    font-size: 16px;
     color: #000000;
     margin-bottom: 30px;
-    font-weight: 600;
+    padding-top: 20px;
+    padding-right: 10px;
 }
 
 input[type="radio"],
@@ -75,10 +97,14 @@ input[type="checkbox"] {
     margin: 0 4px 8px 60px;
 }
 
+select[name="user_gender"] {
+    background-color: white;
+}
+
 button[type="submit"] {
     margin: auto;
-    width: 50%;
-    margin-bottom: 20px;
+    background-color: dodgerblue;
+    color: white;
 }
 
 .gender {
@@ -90,7 +116,6 @@ button[type="submit"] {
 #username {
     background-color: rgb(255, 255, 255);
     border: none;
-    padding: 10px;
 }
 
 #username:hover {
@@ -99,10 +124,15 @@ button[type="submit"] {
 
 .signup-form {
     display: block;
-    width: 55%;
     margin: auto;
-    background-color: #d5ebff;
-    padding: 45px 116px;
+    padding: 30px 50px;
+    border: 1px solid #dddddd;
+    width: 550px;
+    margin-top: 50px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 3px #eeeeee;
 }
 
 form {
@@ -112,13 +142,14 @@ form {
 
 .infos {
     margin: auto;
-    width: 65%;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .headinfo {
     font-size: 40px;
 }
 
-label {
-    font-size: 30px;
+hr {
+    margin: 0px;
 }

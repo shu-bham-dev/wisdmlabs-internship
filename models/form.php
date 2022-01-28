@@ -26,9 +26,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $signup = new SignupContr($name, $username, $phone, $email, $password, $con_password,$gender);
 
    // Running error handlers and user signup
-   $signup->signupUser();
+  $signup->signupUser();
+   // echo "<pre>";
+   // print_r($result);
+   // die();
    session_start();
    $_SESSION["name"] = $name;
+   $_SESSION["userid"] = $name;
    $_SESSION["username"] = $username;
    $_SESSION["phone"] = $phone;
    $_SESSION["gender"] = $gender;

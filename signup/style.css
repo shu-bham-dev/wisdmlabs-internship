@@ -9,31 +9,45 @@ body {
     background-color: #f8f8f8;
 }
 
-.para {
-    width: 80%;
-    margin: 50px auto;
+a {
+    color: rgb(0, 0, 0);
 }
 
-.styles {
-    font-size: 22px;
-    border-radius: 23px;
-    background: #292D32;
-    margin: 50px 5px;
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
-.login {
-    width: 50%;
-    margin: auto;
+nav ul li {
+    margin: 0 5px;
 }
 
-button {
-    padding: 10px 15px;
-    border-radius: 3px;
-    width: 200px;
-    cursor: pointer;
+nav ul li a {
+    color: #000000;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    text-decoration: none;
     font-size: 18px;
 }
 
+nav ul li a:active,
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+    background: dodgerblue;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
+}
+
+#edit,
+#logout,
 #home {
     font-size: 15px;
     background-color: #337ab7;
@@ -42,34 +56,28 @@ button {
 
 .nav {
     display: flex;
-    flex-direction: row-reverse;
-}
-
-#edit,
-#logout {
-    font-size: 15px;
-    background-color: #292D32;
-    color: white;
-    box-shadow: 2px 2px 7px #40454e, 0px -10px 30px #40454e;
-}
-
-.nav {
-    display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
-    border-bottom: double;
+}
+
+.text-danger {
+    color: red;
+    font-weight: 600;
 }
 
 .head {
     font-size: 25px;
     margin-left: 50px;
-    margin-right: 600px;
-    margin-top: 20px
+    margin-right: 500px;
+    margin-top: 10px
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+label[for="gender"] {
+    width: 100%;
+}
+
+select[name="user_gender"] {
+    width: 100%;
+    background-color: white;
 }
 
 input[type="text"],
@@ -86,16 +94,16 @@ textarea,
 select {
     border: none;
     border-bottom: 1px solid rgb(151, 151, 151);
-    font-size: 20px;
-    padding: 10px;
-    background-color: #d5ebff;
+    font-size: 16px;
     color: #000000;
     margin-bottom: 30px;
-    font-weight: 600;
+    padding-top: 20px;
+    padding-right: 10px;
 }
 
-label {
-    font-size: 30px;
+h3 {
+    text-align: center;
+    color: red;
 }
 
 input[type="radio"],
@@ -105,46 +113,38 @@ input[type="checkbox"] {
 
 button[type="submit"] {
     margin: auto;
-    width: 50%;
-    margin-bottom: 20px;
-}
-
-#gender {
-    width: 100%;
-}
-
-.gotohome {
-    background-color: rgb(32, 31, 31);
-    border: 0;
-    padding: 10px 15px;
-    border-radius: 3px;
-    width: 100px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-a {
+    background-color: dodgerblue;
     color: white;
 }
 
 .signup-form {
     display: block;
-    width: 66%;
     margin: auto;
-    background-color: #d5ebff;
-    padding: 45px 116px;
+    padding: 30px 50px;
+    border: 1px solid #dddddd;
+    width: 550px;
+    margin-top: 50px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 3px #eeeeee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 .infos {
     margin: auto;
-    width: 65%;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .headinfo {
     font-size: 40px;
 }
 
-.text-danger {
-    color: red;
-    font-weight: 600;
+hr {
+    margin: 0px;
 }

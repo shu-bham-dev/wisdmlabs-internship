@@ -1,6 +1,6 @@
 <?php
 
-include '../models/form.php';
+// include '../models/form.php';
 session_start();
 
 ?>
@@ -17,14 +17,16 @@ session_start();
 <body>
     <?php
     if(isset($_SESSION["name"])){
-        echo "<div class='afterlogin'><h2>Hi " ,$_SESSION['name'], " ,You are successfully logged in</h2>";
-    }
     ?>
+    <!-- Welocome note with menus for registered users -->
+    <div class='afterlogin'><h3>Hi <?php echo $_SESSION['name'];?>, You are successfully logged in</h3>
+        <nav><ul><li>
+        <a href='../logout/index.php'>Log out</a> </li>
+        <li><a href='../editaccount/index.php'>Edit Account</a></li></ul>
+        </nav>
+    </div><hr>
+
     <?php
-    if(isset($_SESSION["name"])){
-    echo "<div class='nav'>
-        <button id='logout'><a href='../logout/index.php'>Log out</a></button> 
-        <button id='edit'><a href='../editaccount/index.php'>Edit Account</a></button></div></div>";
     }
     ?>
 
@@ -45,9 +47,12 @@ session_start();
         commodo, cursus turpis pulvinar, volutpat odio.</p>
         </div>
 
+
+        <!-- This paragraph is for registered user only -->
         <?php
         if(isset($_SESSION["name"])){
-            echo "<div class='para2 styles'>
+        ?>
+        <div class='para2 styles'>
             <p> Sed vitae turpis ac nisi malesuada blandit. Quisque eu molestie eros. Donec
         facilisis hendrerit augue, eu adipiscing sem lacinia non. Integer
         sodales purus odio, non pharetra massa accumsan in. In vitae nunc non
@@ -57,17 +62,24 @@ session_start();
         Donec eu libero eu lorem convallis porta. Nullam interdum vitae lorem
         sit amet dignissim. Proin sit amet tortor ac odio varius dapibus nec at
         Sem.</p>
-        </div>";
+        </div>
+
+        <!-- Buttons for non-registred users -->
+        <?php
         }else{
-        echo "<div class='login'>
+        ?>
+
+        <div class='login'>
             <p>To read more, please
                 <button id='readmore'> <a href='../login/'>LOGIN</a></button> or
                 <button id='readmore'> <a href='../signup/'> REGISTER</a></button>
             </p>
-        </div>";
+        </div>
+
+
+        <?php
         }
         ?>
-
 
     </div>
 </body>
