@@ -37,7 +37,9 @@ include '../common.php';
                 <div class="inputContainer">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name" value="<?php echo $_SESSION['name'];?>">
-                <span id="nameInfo" class="text-danger"> </span>
+                <span id="nameInfo" class="text-danger">
+                <?php if(isset($_SESSION['update_error']['user_name'])) echo $_SESSION['update_error']['user_name']; ?>
+                </span>
                 </div>
 
                 <div class="inputContainer">
@@ -47,7 +49,9 @@ include '../common.php';
                 <div class="inputContainer">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" value="<?php echo $_SESSION['phone'];?>">
-                <span id="phoneInfo" class="text-danger"> </span></div>
+                <span id="phoneInfo" class="text-danger">
+               <?php if(isset($_SESSION['validation_error']['phone'])) echo $_SESSION['validation_error']['phone']; ?>
+                </span></div>
 
                 <div class="inputContainer">
                 <label for="gender">Choose your gender:</label>
@@ -60,7 +64,9 @@ include '../common.php';
                 <div class="inputContainer">
                 <label for="email">Email:</label>
                 <input type="email" id="mail" name="user_email" value="<?php echo $_SESSION['email'];?>">
-                <span id="emailInfo" class="text-danger"> </span></div>
+                <span id="emailInfo" class="text-danger">
+                <?php if(isset($_SESSION['validation_error']['email'])) echo $_SESSION['validation_error']['email']; ?>
+                </span></div>
 
                 <button type="submit" id="submitform">Update</button>
                 </form>

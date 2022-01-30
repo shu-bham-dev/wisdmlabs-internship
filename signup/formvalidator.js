@@ -16,12 +16,6 @@ function validateForm() {
     }
 
 
-
-
-
-
-
-
     if (name == "") {
         document.getElementById('nameInfo').innerHTML = "Name field can not be empty!";
         return false;
@@ -30,6 +24,14 @@ function validateForm() {
     }
 
 
+    let spl = "!@#$%&*()+,-./:;<=>?[]^_`{|}";
+    for (let i = 0; i < spl.length; i++) {
+        let result = name.includes(spl[i]);
+        if (result) {
+            document.getElementById('nameInfo').innerHTML = "Name can not contain special character";
+            return false;
+        }
+    }
 
 
     for (let i = 0; i < spl.length; i++) {
@@ -39,17 +41,6 @@ function validateForm() {
             return false;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 
     let containSpaces = /\s/g;
     res = containSpaces.test(username);
@@ -63,24 +54,12 @@ function validateForm() {
 
 
 
-
-
-
-
-
-
-
-
     if (username == "") {
         document.getElementById('usernameInfo').innerHTML = "Username field can not be empty!";
         return false;
     } else {
         document.getElementById('usernameInfo').innerHTML = "";
     }
-
-
-
-
 
 
 
@@ -93,31 +72,12 @@ function validateForm() {
 
 
 
-
-
-
-
-
-
-
-
-
     if (phone.length != 10) {
         document.getElementById('phoneInfo').innerHTML = "Phone number must be 10 digits!";
         return false;
     } else {
         document.getElementById('phoneInfo').innerHTML = "";
     }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -133,58 +93,12 @@ function validateForm() {
 
 
 
-
-
-
-
-
-
-
-
-    let spl = "!@#$%&*()+,-./:;<=>?[]^_`{|}";
-    for (let i = 0; i < spl.length; i++) {
-        let result = name.includes(spl[i]);
-        if (result) {
-            document.getElementById('nameInfo').innerHTML = "Name can not contain special character";
-            return false;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     if (pass == "") {
         document.getElementById('passInfo').innerHTML = "Password field can not be empty!";
         return false;
     } else {
         document.getElementById('passInfo').innerHTML = "";
     }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -197,27 +111,12 @@ function validateForm() {
 
 
 
-
-
-
-
-
-
-
-
     if (username.length < 4) {
         document.getElementById('usernameInfo').innerHTML = "Username is too short!";
         return false;
     } else {
         document.getElementById('usernameInfo').innerHTML = "";
     }
-
-
-
-
-
-
-
 
 
 
@@ -230,11 +129,6 @@ function validateForm() {
 
 
 
-
-
-
-
-
     if (email == "") {
         document.getElementById('emailInfo').innerHTML = "Email field can not be empty!";
         return false;
@@ -244,23 +138,9 @@ function validateForm() {
 
 
 
-
-
-
-
-
-
-
-
-
     if (!isNAN(phone)) {
         document.getElementById('phoneInfo').innerHTML = "";
     }
-
-
-
-
-
 
 
 
@@ -274,23 +154,12 @@ function validateForm() {
 
 
 
-
-
-
-
-
-
-
-
     if (isNaN(phone)) {
         document.getElementById('phoneInfo').innerHTML = "Phone must contains number only ";
         return false;
     } else {
         document.getElementById('phoneInfo').innerHTML = "";
     }
-
-
-
 
 
     if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {

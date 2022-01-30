@@ -27,6 +27,7 @@ Session::ifSession();
          <div class="container">
          <div class="signup-form">
          <h2 class="infos">Register Account</h2>
+
          <h3 id="notified">
 
          <?php
@@ -40,6 +41,7 @@ Session::ifSession();
          ?>
          
          </h3>
+
             <form name="formName" action="index.php" method="post" onsubmit="return validateForm()">
 <!-- NAME -->
             <div class="inputContainer">

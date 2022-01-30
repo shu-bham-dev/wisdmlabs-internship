@@ -35,7 +35,7 @@ class SignupContr extends Signup{
             session_start();
             // validate data
             // valide name
-            if(empty($_POST['user_name']) === true OR is_numeric($_POST['user_name']) === true){
+            if(empty($_POST['user_name']) === true OR preg_match('/\d/',$_POST['user_name']) === true){
                 // generate error
                 if(empty($_POST['user_name']) === true){
                     $_SESSION['validation_error']['user_name'] = 'Name is required';
@@ -43,6 +43,19 @@ class SignupContr extends Signup{
                     $_SESSION['validation_error']['user_name'] = 'Name must contain alphabets.';
                 }
             }
+            
+            // if(!preg_match('!@#$%&*()+,-./:;<=>?[]^_`{|}', $_POST['user_name']) OR !preg_match('!@#$%&*()+,-./:;<=>?[]^_`{|}', $_POST['user_username'])){
+
+            //     if(!preg_match('!@#$%&*()+,-./:;<=>?[]^_`{|}', $_POST['user_name'])){
+            //         $_SESSION['validation_error']['user_name'] = 'Name can not contain special characters';
+
+            //     }
+
+            //     else if(!preg_match('!@#$%&*()+,-./:;<=>?[]^_`{|}', $_POST['user_username'])){
+            //         $_SESSION['validation_error']['user_username'] = 'Username can not contain special characters';
+            //     }
+            // }
+            
             
             // validate phone
             if(empty($_POST['phone']) === true OR is_numeric($_POST['phone']) === false){
