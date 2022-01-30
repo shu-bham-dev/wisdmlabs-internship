@@ -1,3 +1,4 @@
+<!-- Document not in use -->
 <?php
 try {
     $server = 'localhost';

@@ -96,9 +96,14 @@ select {
     border-bottom: 1px solid rgb(151, 151, 151);
     font-size: 16px;
     color: #000000;
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     padding-top: 20px;
     padding-right: 10px;
+    width: 100%;
+}
+
+.inputContainer {
+    margin-bottom: 15px;
 }
 
 h3 {

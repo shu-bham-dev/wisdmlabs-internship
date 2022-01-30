@@ -40,18 +40,23 @@ Session::ifSession();
          
          </h3>
             <form name="formName" action="index.php" method="post" onsubmit="return validateForm()">
+            <div class="inputContainer">
                <label for="name">Name:</label>
-               <input type="text" id="name" name="user_name" title="should contains alphabets">
-               <span id="nameInfo" class="text-danger"> </span>
+               <input type="text" id="name" name="user_name" title="should contains alphabets"
+               value='<?php echo isset($_POST["user_name"]) ? $_POST["user_name"] : ''; ?>'>
+               <span id="nameInfo" class="text-danger"> </span></div>
 
+               <div class="inputContainer">
                <label for="name">Username:</label>
                <input type="text" id="username" name="user_username">
-               <span id="usernameInfo" class="text-danger"> </span>
+               <span id="usernameInfo" class="text-danger"> </span></div>
 
+               <div class="inputContainer">
                <label for="phone">Phone Number:</label>
                <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" placeholder="7007592373">
-               <span id="phoneInfo" class="text-danger"> </span>
+               <span id="phoneInfo" class="text-danger"> </span></div>
 
+               <div class="inputContainer">
                <div class="gender">
                <label for="gender">Choose your gender:</label>
                <select name="user_gender" id="gender">
@@ -60,19 +65,23 @@ Session::ifSession();
                   <option value="transgender">Other</option>
                </select>
                <span id="genderInfo" class="text-danger"> </span>
-               </div>
+               </div></div>
 
+               <div class="inputContainer">
                <label for="email">Email:</label>
                <input type="email" id="mail" name="user_email">
-               <span id="emailInfo" class="text-danger"> </span>
+               <span id="emailInfo" class="text-danger"> </span></div>
 
+               <div class="inputContainer">
                <label for="password">Password:</label>
                <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-               <span id="passInfo" class="text-danger"> </span>
+               <span id="passInfo" class="text-danger"> </span></div>
 
+
+               <div class="inputContainer">
                <label for="cnf-password">Confirm Password:</label>
                <input type="password" id="cnf-password" name="user_cnf_password">
-               <span id="cnfInfo" class="text-danger"> </span>
+               <span id="cnfInfo" class="text-danger"> </span></div>
 
                <button id="sub"type="submit" >Sign Up</button>
             </form>

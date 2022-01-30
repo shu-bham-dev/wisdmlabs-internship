@@ -38,6 +38,7 @@ class SignupContr extends Signup{
             // </script>";
             session_start();
             $_SESSION['error'] = "User already exist";
+            echo $_POST['user_name'];
             // echo "<style>center{ color: red;
             //     margin-top: 5.5em;
             //     position: absolute;
