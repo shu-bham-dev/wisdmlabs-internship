@@ -23,6 +23,7 @@ body {
 
 .text-danger {
     color: red;
+    font-weight: 600;
 }
 
 .login {
@@ -74,7 +75,12 @@ select {
     color: #000000;
     margin-bottom: 5px;
     padding-top: 20px;
+    width: 100%;
     padding-right: 10px;
+}
+
+.inputContainer {
+    margin-bottom: 18px;
 }
 
 input[type="radio"],

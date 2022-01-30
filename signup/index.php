@@ -33,43 +33,44 @@ Session::ifSession();
             if(isset($_SESSION["error"])){
                $error = $_SESSION["error"];
                echo "<span>$error</span>";
-               session_unset();
-               session_destroy();
+               unset($_SESSION['error']);
             }
          ?>
          
          </h3>
-            <form name="formName" action="index.php" method="post" onsubmit="return validateForm()">
+            <form name="formName" action="index.php" method="post" onsubmit="">
             <div class="inputContainer">
                <label for="name">Name:</label>
                <input type="text" id="name" name="user_name" title="should contains alphabets"
-               value='<?php echo isset($_POST["user_name"]) ? $_POST["user_name"] : ''; ?>'>
-               <span id="nameInfo" class="text-danger"> </span></div>
+               value='<?php echo isset($_SESSION["tempUser"]->user_name) ? $_SESSION["tempUser"]->user_name : ''; ?>'>
+               <span id="nameInfo" class="text-danger"> <?php if(isset($_SESSION['validation_error']['phone'])) echo $_SESSION['validation_error']['user_name']; ?>
+               </span></div>
 
                <div class="inputContainer">
                <label for="name">Username:</label>
-               <input type="text" id="username" name="user_username">
+               <input type="text" id="username" name="user_username"
+               value="<?php echo isset($_SESSION["tempUser"]->user_username) ? $_SESSION["tempUser"]->user_username : ''; ?>">
                <span id="usernameInfo" class="text-danger"> </span></div>
 
                <div class="inputContainer">
                <label for="phone">Phone Number:</label>
-               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" placeholder="7007592373">
+               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" placeholder="7007592373" value="<?php echo isset($_SESSION["tempUser"]->phone) ? $_SESSION["tempUser"]->phone : ''; ?>">
                <span id="phoneInfo" class="text-danger"> </span></div>
 
                <div class="inputContainer">
                <div class="gender">
                <label for="gender">Choose your gender:</label>
                <select name="user_gender" id="gender">
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="transgender">Other</option>
+                  <option <?php echo (isset($_SESSION["tempUser"]->user_gender) AND strtolower($_SESSION['tempUser']->user_gender) == 'male') ? 'selected':null; ?> value="male">Male</option>
+                  <option <?php echo (isset($_SESSION["tempUser"]->user_gender) AND strtolower($_SESSION['tempUser']->user_gender) == 'female') ? 'selected':null; ?> value="female">Female</option>
+                  <option <?php echo (isset($_SESSION["tempUser"]->user_gender) AND strtolower($_SESSION['tempUser']->user_gender) == 'transgender') ? 'selected':null; ?>  value="transgender">Other</option>
                </select>
                <span id="genderInfo" class="text-danger"> </span>
                </div></div>
 
                <div class="inputContainer">
                <label for="email">Email:</label>
-               <input type="email" id="mail" name="user_email">
+               <input type="email" id="mail" name="user_email" value="<?php echo isset($_SESSION["tempUser"]->user_email) ? $_SESSION["tempUser"]->user_email : ''; ?>">
                <span id="emailInfo" class="text-danger"> </span></div>
 
                <div class="inputContainer">

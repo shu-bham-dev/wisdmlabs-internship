@@ -46,21 +46,11 @@ function validateForm() {
     }
 
 
-
-
-
-
-
-
-
     if (username.length < 4) {
         document.getElementById('usernameInfo').innerHTML = "User not found!";
         return false;
     } else {
         document.getElementById('usernameInfo').innerHTML = "";
     }
-
-
-
 
 }

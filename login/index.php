@@ -26,14 +26,15 @@ Session::ifSession();
     <div class="signup-form">
     <h2 class="infos">Login Account</h2>
             <form action="index.php" method="post" onsubmit="return validateForm()">
-
+                <div class="inputContainer">
                <label for="name">Username</label>
                <input type="text" id="username" name="user_username">
-               <span id="usernameInfo" class="text-danger"> </span>
+               <span id="usernameInfo" class="text-danger"> </span></div>
 
+               <div class="inputContainer">
                <label for="password">Password</label>
                <input type="password" id="password" name="user_password">
-               <span id="passInfo" class="text-danger"> </span>
+               <span id="passInfo" class="text-danger"> </span></div>
 
                <button type="submit">Login</button>
             </form>

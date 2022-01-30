@@ -24,31 +24,84 @@ class SignupContr extends Signup{
     public function signupUser(){
 
         if($this->usernameTakenCheck() == false){
-            // $message = "Username or Email already exist!";
-            // echo "<script type='text/javascript'>
-            // if (window.confirm('$message')){
-            //     document.location = '../signup';
-            // }else{
-            //     document.location = '../home';
-            // }
-            // </script>";
-            // $message = "Username or Email already exist!";
-            // echo "<script type='text/javascript'>
-            // document.getElementById('notified').innerHTML = 'User already exists';
-            // </script>";
+            // session_start();
+            // $_SESSION['error'] = "User already exist";
+            // echo $_POST['user_name'];
+            // header("location: ../signup");
+            // // exit();
+            // die();
+
+
             session_start();
-            $_SESSION['error'] = "User already exist";
-            echo $_POST['user_name'];
-            // echo "<style>center{ color: red;
-            //     margin-top: 5.5em;
-            //     position: absolute;
-            //     font-size: 20px;
-            //     width: 91em;}</style>
-            //     <a href='../signup'>Back</a>
-            //     <center>User already exist!</center>";
-            header("location: ../signup");
-            // exit();
-            die();
+            // validate data
+            // valide name
+            if(empty($_POST['user_name']) === true OR is_numeric($_POST['user_name']) === true){
+                // generate error
+                if(empty($_POST['user_name']) === true){
+                    $_SESSION['validation_error']['user_name'] = 'Please enter your name.';
+                } else {
+                    $_SESSION['validation_error']['user_name'] = 'Name must contain alphabets.';
+                }
+            }
+            
+            // validate phone
+            if(empty($_POST['phone']) === true OR is_numeric($_POST['phone']) === false){
+                if(empty($_POST['phone']) === true){
+                    $_SESSION['validation_error']['phone'] = 'Phone number is required.';
+                } else {
+                    $_SESSION['validation_error']['phone'] = 'You have entered a non-numeric phone number, it must be numeric.';
+                }
+            }
+
+            // validate username
+            if(empty($_POST['user_username']) === true OR ( preg_match('/\s/',$_POST['user_username']) ) === false){
+                if(empty($_POST['user_username']) === true){
+                    $_SESSION['validation_error']['phone'] = 'Username is required.';
+                } else {
+                    $_SESSION['validation_error']['phone'] = 'Username can not have whitespace';
+                }
+            }
+
+            // validate username
+            if(empty($_POST['user_gender']) === true){
+                $_SESSION['validation_error']['gender'] = 'Gender is required.';
+            }
+
+            //Email validate
+            if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
+                $_SESSION['validation_error']['gender'] = 'Invalid Email formate';
+            }
+
+            //Password alidate
+            if(empty($_POST['user_password'])){
+                $_SESSION['validation_error']['gender'] = 'Please enter password';
+            }
+    
+            if($this->usernameTakenCheck() == false){
+                $_SESSION['error'] = "User already exist";
+                echo $_POST['user_name'];
+                $_SESSION['tempUser'] = (object)[
+                    'user_name'         => $_POST['user_name'],
+                    'user_username'     => $_POST['user_username'],
+                    'phone'             => $_POST['phone'],
+                    'user_gender'       => $_POST['user_gender'],
+                    'user_email'        => $_POST['user_email'],
+                    'user_password'     => $_POST['user_password'],
+                    'user_cnf_password' => $_POST['user_cnf_password']
+                ];
+                header("location: ../signup");
+                exit();
+            }
+    
+    
+            if(isset($_SESSION['tempUser']) === true){
+                unset($_SESSION['tempUser']);
+            }
+            if(isset($_SESSION['validation_error']) === true){
+                unset($_SESSION['validation_error']);
+            }
+            $this->setUser($this->username,$this->email,$this->password,$this->name,$this->phone,$this->gender);
+            return $this->returnUID($this->username);
         }
 
         $this->setUser($this->username,$this->email,$this->password,$this->name,$this->phone,$this->gender);

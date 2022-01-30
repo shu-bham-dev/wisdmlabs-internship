@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    $email = $_POST["user_email"];
    $password = $_POST["user_password"];
    $con_password = $_POST["user_cnf_password"];
-
+   
    // SignupContrl class
    include_once "../models/dbconn.php";
    include_once "../classes/signup.php";
@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
    // Running error handlers and user signup
    // $signup->signupUser();
-  $getUID = $signup->signupUser();
+   $getUID = $signup->signupUser();
    session_start();
    $_SESSION["name"] = $name;
    $_SESSION["userid"] = $getUID;

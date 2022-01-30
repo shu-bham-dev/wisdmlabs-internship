@@ -100,7 +100,7 @@ Session::ifSession();
         let email = document.getElementById("mail").value;
 
     if (email == "") {
-        document.getElementById('emailInfo').innerHTML = "<style>.text-danger{color:red;}</style><br>Email field can not be empty!";
+        document.getElementById('emailInfo').innerHTML = "<style>.text-danger{font-weight:600; color:red;}</style><br>Email field can not be empty!";
         return false;
     }
         }

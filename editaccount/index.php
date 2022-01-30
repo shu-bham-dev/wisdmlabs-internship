@@ -33,27 +33,34 @@ include '../common.php';
     <h2 class="infos">Update Account</h2>
     
     <form action="../models/update.php" method="post" onsubmit="return validateForm()">
+
+                <div class="inputContainer">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name" value="<?php echo $_SESSION['name'];?>">
                 <span id="nameInfo" class="text-danger"> </span>
-                <label for="name">Username:</label>
-                
-                <input type="text" class="fixed" id="username" pattern=[0-9]{10} name="user_username" value="<?php echo $_SESSION['username'];?>" readonly>
+                </div>
 
+                <div class="inputContainer">
+                <label for="name">Username:</label>
+                <input type="text" class="fixed" id="username" pattern=[0-9]{10} name="user_username" value="<?php echo $_SESSION['username'];?>" readonly></div>
+
+                <div class="inputContainer">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" value="<?php echo $_SESSION['phone'];?>">
-                <span id="phoneInfo" class="text-danger"> </span>
+                <span id="phoneInfo" class="text-danger"> </span></div>
 
+                <div class="inputContainer">
                 <label for="gender">Choose your gender:</label>
                 <select name="user_gender" id="gender">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                     <option value="others">Other</option>
-                </select>
+                </select></div>
 
+                <div class="inputContainer">
                 <label for="email">Email:</label>
                 <input type="email" id="mail" name="user_email" value="<?php echo $_SESSION['email'];?>">
-                <span id="emailInfo" class="text-danger"> </span>
+                <span id="emailInfo" class="text-danger"> </span></div>
 
                 <button type="submit" id="submitform">Update</button>
                 </form>
