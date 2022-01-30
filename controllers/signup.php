@@ -38,7 +38,7 @@ class SignupContr extends Signup{
             if(empty($_POST['user_name']) === true OR is_numeric($_POST['user_name']) === true){
                 // generate error
                 if(empty($_POST['user_name']) === true){
-                    $_SESSION['validation_error']['user_name'] = 'Please enter your name.';
+                    $_SESSION['validation_error']['user_name'] = 'Name is required';
                 } else {
                     $_SESSION['validation_error']['user_name'] = 'Name must contain alphabets.';
                 }
@@ -56,9 +56,9 @@ class SignupContr extends Signup{
             // validate username
             if(empty($_POST['user_username']) === true OR ( preg_match('/\s/',$_POST['user_username']) ) === false){
                 if(empty($_POST['user_username']) === true){
-                    $_SESSION['validation_error']['phone'] = 'Username is required.';
+                    $_SESSION['validation_error']['user_username'] = 'Username is required.';
                 } else {
-                    $_SESSION['validation_error']['phone'] = 'Username can not have whitespace';
+                    $_SESSION['validation_error']['user_username'] = 'Username can not have whitespace';
                 }
             }
 
@@ -68,14 +68,22 @@ class SignupContr extends Signup{
             }
 
             //Email validate
-            if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
-                $_SESSION['validation_error']['gender'] = 'Invalid Email formate';
+            if(empty($_POST['user_email'])){
+                $_SESSION['validation_error']['email'] = 'Email is required';
+            }
+            else if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
+                $_SESSION['validation_error']['email'] = 'Invalid Email format';
             }
 
-            //Password alidate
+            //Password validate
             if(empty($_POST['user_password'])){
-                $_SESSION['validation_error']['gender'] = 'Please enter password';
+                $_SESSION['validation_error']['password'] = 'Please enter password';
             }
+            //Same Password
+            if($_POST['user_password'] != $_POST['user_cnf_password']){
+                $_SESSION['validation_error']['user_cnf_password'] = 'Password do not match';
+            }
+            // End of validations
     
             if($this->usernameTakenCheck() == false){
                 $_SESSION['error'] = "User already exist";

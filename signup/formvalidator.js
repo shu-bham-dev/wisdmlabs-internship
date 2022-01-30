@@ -32,6 +32,51 @@ function validateForm() {
 
 
 
+    for (let i = 0; i < spl.length; i++) {
+        let result = username.includes(spl[i]);
+        if (result) {
+            document.getElementById('usernameInfo').innerHTML = "Username can not contain special character";
+            return false;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    let containSpaces = /\s/g;
+    res = containSpaces.test(username);
+    if (res) {
+        document.getElementById('usernameInfo').innerHTML = "Invalid username";
+        return false;
+    } else {
+        document.getElementById('usernameInfo').innerHTML = "";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    if (username == "") {
+        document.getElementById('usernameInfo').innerHTML = "Username field can not be empty!";
+        return false;
+    } else {
+        document.getElementById('usernameInfo').innerHTML = "";
+    }
 
 
 
@@ -113,51 +158,6 @@ function validateForm() {
 
 
 
-    for (let i = 0; i < spl.length; i++) {
-        let result = username.includes(spl[i]);
-        if (result) {
-            document.getElementById('usernameInfo').innerHTML = "Username can not contain special character";
-            return false;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    let containSpaces = /\s/g;
-    res = containSpaces.test(username);
-    if (res) {
-        document.getElementById('usernameInfo').innerHTML = "Invalid username";
-        return false;
-    } else {
-        document.getElementById('usernameInfo').innerHTML = "";
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    if (username == "") {
-        document.getElementById('usernameInfo').innerHTML = "Username field can not be empty!";
-        return false;
-    } else {
-        document.getElementById('usernameInfo').innerHTML = "";
-    }
 
 
 

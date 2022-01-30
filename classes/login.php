@@ -82,5 +82,9 @@ class Login extends Dbh{
     }
 
 }
-
+?>
+<?php
+if(isset($_SESSION['tempUser'])){
+  unset($_SESSION['tempUser']);
+}
 ?>

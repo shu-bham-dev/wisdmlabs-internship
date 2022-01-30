@@ -76,7 +76,6 @@ session_start();
             </p>
         </div>
 
-
         <?php
         }
         ?>
@@ -84,3 +83,8 @@ session_start();
     </div>
 </body>
 </html>
+<?php
+if(isset($_SESSION['tempUser'])){
+  unset($_SESSION['tempUser']);
+}
+?>

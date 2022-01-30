@@ -46,3 +46,8 @@ Session::ifSession();
       <script src="formvalidation.js"></script>
     </body>
 </html>
+<?php
+if(isset($_SESSION['tempUser'])){
+  unset($_SESSION['tempUser']);
+}
+?>
