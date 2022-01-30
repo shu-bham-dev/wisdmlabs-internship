@@ -51,6 +51,7 @@ class SignupContr extends Signup{
         }
 
         $this->setUser($this->username,$this->email,$this->password,$this->name,$this->phone,$this->gender);
+        return $this->returnUID($this->username);
     }
     
     private function usernameTakenCheck(){

@@ -47,7 +47,7 @@ class Login extends Dbh{
                 $user->username = $pass[0]['username'];
                 Session::setSession($user);
                 // $_SESSION["username"] = $username;
-                // // $_SESSION["password"] = $pwd;
+                // $_SESSION["password"] = $pwd;
                 // $_SESSION["gender"] = $pass[0]['gender'];
                 // $_SESSION["phone"] = $pass[0]['phone'];
                 // $_SESSION["name"] = $pass[0]['name'];

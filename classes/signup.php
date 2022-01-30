@@ -14,6 +14,19 @@ class Signup extends Dbh{
             exit();
         };
     }
+    protected function returnUID($username){
+        $sql = "SELECT * from phptask WHERE username = '$username' ";
+      
+        $result = $this->connect()->prepare($sql);
+        if(!$result->execute()){
+            echo "<pre>";
+            print_r($result->errorInfo());
+            print_r("STMT FAIL");
+            exit();
+        };
+        $pass = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $pass[0]['sno'];
+    }
     
     protected function checkUser($username,$email){
 
