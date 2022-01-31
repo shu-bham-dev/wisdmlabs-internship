@@ -84,7 +84,7 @@ Session::ifSession();
                     <form method="post" action="" name="reset" onsubmit="return validateForm()">
                         <div class="form-group">
                            <label><strong>Enter Your Email Address:</strong></label>
-                            <input type="email" id="mail" name="email" placeholder="Enter your email" class="form-control"/>
+                            <input type="email" required id="mail" name="email" placeholder="Enter your email" class="form-control"/>
                             <span id="emailInfo" class="text-danger"> </span>
                         </div>
 

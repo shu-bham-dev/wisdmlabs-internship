@@ -49,13 +49,13 @@
                                     <input type="hidden" name="action" value="update" class="form-control"/>
                                     <div class="form-groups">
                                         <label><strong>Enter New Password:</strong></label>
-                                        <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="mail" name="pass1" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                        <input type="password" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="mail" name="pass1" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                         <span id="emailInfo" class="text-danger"> </span>
                                     </div>
 
                                     <div class="form-groups">
                                         <label><strong>Re-Enter New Password:</strong></label>
-                                        <input type="password" id="conmail" name="pass2" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                                        <input type="password" required id="conmail" name="pass2" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                                         <span id="conInfo" class="text-danger"> </span>
                                     </div>
                                     <input type="hidden" name="email" value="<?php echo $email; ?>"/>

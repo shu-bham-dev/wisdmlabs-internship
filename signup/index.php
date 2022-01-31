@@ -46,7 +46,7 @@ Session::ifSession();
 <!-- NAME -->
             <div class="inputContainer">
                <label for="name">Name:</label>
-               <input type="text" id="name" name="user_name" title="should contains alphabets"
+               <input type="text" required id="name" name="user_name" title="should contains alphabets"
                value='<?php echo isset($_SESSION["tempUser"]->user_name) ? $_SESSION["tempUser"]->user_name : ''; ?>'>
                
                <span id="nameInfo" class="text-danger"> <?php if(isset($_SESSION['validation_error']['user_name'])) echo $_SESSION['validation_error']['user_name']; ?>
@@ -54,7 +54,7 @@ Session::ifSession();
 <!-- USERNAME -->
                <div class="inputContainer">
                <label for="name">Username:</label>
-               <input type="text" id="username" name="user_username"
+               <input type="text" required id="username" name="user_username"
                value="<?php echo isset($_SESSION["tempUser"]->user_username) ? $_SESSION["tempUser"]->user_username : ''; ?>">
 
                <span id="usernameInfo" class="text-danger">
@@ -63,7 +63,7 @@ Session::ifSession();
 <!-- PHONE NUMBER -->
                <div class="inputContainer">
                <label for="phone">Phone Number:</label>
-               <input type="tel" id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" placeholder="7007592373" value="<?php echo isset($_SESSION["tempUser"]->phone) ? $_SESSION["tempUser"]->phone : ''; ?>">
+               <input type="tel" required id="phone" name="phone" title="Starts with 9/8/7/6 and must be 10 digits and all must contain numbers" placeholder="7007592373" value="<?php echo isset($_SESSION["tempUser"]->phone) ? $_SESSION["tempUser"]->phone : ''; ?>">
 
                <span id="phoneInfo" class="text-danger">
                <?php if(isset($_SESSION['validation_error']['phone'])) echo $_SESSION['validation_error']['phone']; ?>
@@ -85,21 +85,21 @@ Session::ifSession();
 <!-- EMAIL -->
                <div class="inputContainer">
                <label for="email">Email:</label>
-               <input type="email" id="mail" name="user_email" value="<?php echo isset($_SESSION["tempUser"]->user_email) ? $_SESSION["tempUser"]->user_email : ''; ?>">
+               <input type="email" required id="mail" name="user_email" value="<?php echo isset($_SESSION["tempUser"]->user_email) ? $_SESSION["tempUser"]->user_email : ''; ?>">
                <span id="emailInfo" class="text-danger">
                <?php if(isset($_SESSION['validation_error']['email'])) echo $_SESSION['validation_error']['email']; ?>
                </span></div>
 <!-- PASSWORD -->
                <div class="inputContainer">
                <label for="password">Password:</label>
-               <input type="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+               <input type="password" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" id="password" name="user_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                <span id="passInfo" class="text-danger">
                <?php if(isset($_SESSION['validation_error']['password'])) echo $_SESSION['validation_error']['password']; ?>
                </span></div>
 <!-- CONFIRM PASSWORD -->
                <div class="inputContainer">
                <label for="cnf-password">Confirm Password:</label>
-               <input type="password" id="cnf-password" name="user_cnf_password">
+               <input type="password" required id="cnf-password" name="user_cnf_password">
                <span id="cnfInfo" class="text-danger">
                <?php if(isset($_SESSION['validation_error']['user_cnf_password'])) echo $_SESSION['validation_error']['user_cnf_password']; ?>
                </span></div>

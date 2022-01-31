@@ -36,7 +36,7 @@ include '../common.php';
 
                 <div class="inputContainer">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name" value="<?php echo $_SESSION['name'];?>">
+                <input type="text" id="name" name="user_name" required value="<?php echo $_SESSION['name'];?>">
                 <span id="nameInfo" class="text-danger">
                 <?php if(isset($_SESSION['update_error']['user_name'])) echo $_SESSION['update_error']['user_name']; ?>
                 </span>
@@ -44,11 +44,11 @@ include '../common.php';
 
                 <div class="inputContainer">
                 <label for="name">Username:</label>
-                <input type="text" class="fixed" id="username" pattern=[0-9]{10} name="user_username" value="<?php echo $_SESSION['username'];?>" readonly></div>
+                <input type="text" class="fixed" id="username" required pattern=[0-9]{10} name="user_username" value="<?php echo $_SESSION['username'];?>" readonly></div>
 
                 <div class="inputContainer">
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" value="<?php echo $_SESSION['phone'];?>">
+                <input type="tel" title="Invalid phone number , should starts with 6/7/8/9 and of 10 digits" id="phone" pattern="[6-9]{1}[0-9]{9}" name="phone" required value="<?php echo $_SESSION['phone'];?>">
                 <span id="phoneInfo" class="text-danger">
                <?php if(isset($_SESSION['validation_error']['phone'])) echo $_SESSION['validation_error']['phone']; ?>
                 </span></div>
@@ -63,7 +63,7 @@ include '../common.php';
 
                 <div class="inputContainer">
                 <label for="email">Email:</label>
-                <input type="email" id="mail" name="user_email" value="<?php echo $_SESSION['email'];?>">
+                <input type="email" id="mail" name="user_email" required value="<?php echo $_SESSION['email'];?>">
                 <span id="emailInfo" class="text-danger">
                 <?php if(isset($_SESSION['validation_error']['email'])) echo $_SESSION['validation_error']['email']; ?>
                 </span></div>

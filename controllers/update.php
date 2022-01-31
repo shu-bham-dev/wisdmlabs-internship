@@ -37,15 +37,14 @@ class UpdateUser extends editUser{
 
             //     if(!preg_match('!@#$%&*()+,-./:;<=>?[]^_`{|}', $_POST['user_name'])){
             //         $_SESSION['update_error']['user_name'] = 'Name can not contain special characters';
-
+            
             //     }
 
             //     else if(!preg_match('!@#$%&*()+,-./:;<=>?[]^_`{|}', $_POST['user_username'])){
             //         $_SESSION['update_error']['user_username'] = 'Username can not contain special characters';
             //     }
             // }
-            
-            
+
             // validate phone
             if(empty($_POST['phone']) === true OR is_numeric($_POST['phone']) === false){
                 if(empty($_POST['phone']) === true){
@@ -81,7 +80,7 @@ class UpdateUser extends editUser{
             if(empty($_POST['user_password'])){
                 $_SESSION['update_error']['password'] = 'Please enter password';
             }
-            
+
             //Same Password
             if($_POST['user_password'] != $_POST['user_cnf_password']){
                 $_SESSION['update_error']['user_cnf_password'] = 'Password do not match';

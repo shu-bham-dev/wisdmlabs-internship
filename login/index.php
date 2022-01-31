@@ -28,12 +28,12 @@ Session::ifSession();
             <form action="index.php" method="post" onsubmit="return validateForm()">
                 <div class="inputContainer">
                <label for="name">Username</label>
-               <input type="text" id="username" name="user_username">
+               <input type="text" required id="username" name="user_username">
                <span id="usernameInfo" class="text-danger"> </span></div>
 
                <div class="inputContainer">
                <label for="password">Password</label>
-               <input type="password" id="password" name="user_password">
+               <input type="password" required id="password" name="user_password">
                <span id="passInfo" class="text-danger"> </span></div>
 
                <button type="submit">Login</button>
